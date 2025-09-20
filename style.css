@@ -241,4 +241,66 @@
             font-size: 0.9rem;
             line-height: 1.5;
         }
+/* About Section - Image 3 */
+        .about {
+            padding: 1rem 1rem;
+            background: #FFFFFF;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1f2937;
+            font-weight: 700;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+        }
+
+        .about-item {
+            text-align: center;
+        }
+
+        .about-icon {
+            width: 80px;
+            height: 80px;
+            background: #fbbf24;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .about-icon::before {
+            content: "⭐";
+        }
+
+        .about-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .about-item p {
+            color: #6b7280;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
 
