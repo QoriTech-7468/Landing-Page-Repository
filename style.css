@@ -92,3 +92,153 @@
             transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
         }
+  /* Sections */
+        .page-section {
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+
+        /* Hero Section - Image 1 */
+        .hero {
+            background: #043873 100%;
+            color: white;
+            padding: 2rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            color: #fbbf24;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .hero-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 1rem 2rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .hero-btn:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        .hero-image-actual {
+          /* Mismas propiedades de tamaño y borde del diseño original */
+          width: 100%; /* Ocupa el 100% del contenedor padre */
+          border-radius: 12px; /* Borde redondeado */
+          box-shadow: 0 20px 40px rgba(0,0,0,0.2); /* Sombra para el efecto de elevación */
+          display: block; /* Asegura que no haya espacios extra */
+          object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+           height: auto;
+         }
+
+        /* Services Section - Image 2 */
+        .services {
+            padding: 4rem 2rem;
+            background: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .services-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+            font-weight: 700;
+        }
+
+        .services-subtitle {
+            color: #6b7280;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .service-image-actual {
+            width: 100%;
+            height: 200px; /* Mantén el mismo alto para que se vean uniformes */
+            display: block;
+            object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin distorsionarla */
+            border-radius: 12px 12px 0 0; /* Bordes redondeados solo en la parte superior */
+        }
+       
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+
+        .service-content p {
+            color: #6b7280;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
