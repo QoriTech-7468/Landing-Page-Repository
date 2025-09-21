@@ -1,3 +1,46 @@
+  function applyTranslation(lang) {
+         const elements = document.querySelectorAll('[data-i18n]');
+          elements.forEach(el => {
+           const key = el.getAttribute('data-i18n');
+           let text = getNestedTranslation(translation[lang], key);
+    
+            // Manejar casos especiales donde el texto es un array (como en las listas)
+           if (Array.isArray(text)) {
+           const parts = key.split('.');
+           const index = parseInt(parts[parts.length - 1], 10) - 1; // Obtener el índice (restar 1)
+           text = text[index] || '';
+              }
+
+             if (text) {
+             el.textContent = text;
+                 }
+        });
+          } 
+
+// Función auxiliar para obtener el valor de una clave anidada (ej. 'hero.title')
+function getNestedTranslation(obj, key) {
+  return key.split('.').reduce((o, i) => o ? o[i] : '', obj);
+}
+
+// Asignar el idioma predeterminado y escuchar los cambios
+document.addEventListener('DOMContentLoaded', () => {
+    // Establecer el idioma inicial (por ejemplo, el idioma del navegador o un predeterminado)
+    const initialLang = 'en'; // o 'es'
+    document.documentElement.lang = initialLang;
+    applyTranslation(initialLang);
+
+    // Escuchar clics en los botones de idioma
+    document.getElementById('lang-en').addEventListener('click', () => {
+        document.documentElement.lang = 'en';
+        applyTranslation('en');
+    });
+
+    document.getElementById('lang-es').addEventListener('click', () => {
+        document.documentElement.lang = 'es';
+        applyTranslation('es');
+    });
+});
+
 const translation = {
   en: {
     navbar: {
@@ -54,8 +97,8 @@ const translation = {
       title: "Our Team",
       description: "Learn more about our partners",
       role: '- Software Engineer -',
-      julio: "Jesús Castillo",
-      gabriela: "Yaku Guzmán",
+      julio: "Jesus Castillo",
+      gabriela: "Yaku Guzman",
       jahaziel: "Christopher Costa",
       williams: "Ingrid Medina",
       yaku: "Santiago Gordillo"
@@ -104,45 +147,52 @@ const translation = {
       description: 'Hear what our users say about how Restock has transformed their business, helping them manage inventory smarter and reach their goals with greater peace of mind and confidence.',
       cards: {
         '1': {
-          comment: '"As a driver, I can focus on th road instead of worrying about planning. Everything is mapped out for me."',
-          name: 'David R., Driver'
+          comment: '"As a driver, I can focus on the road instead of worrying about planning. Everything is mapped out for me."',
+          name: 'David R., Driver',
+          role: 'Professional Driver' // NUEVO
         },
         '2': {
-          comment: '"Simple. smart, and efficient. Exactly what our transport business needed."',
-          name: 'Emily P., Manager'
+          comment: '"Simple, smart, and efficient. Exactly what our transport business needed."',
+          name: 'Emily P., Manager',
+          role: 'Operations Manager' // NUEVO
         }
       }
     },
     faq: {
-      title: 'Frequently ask Questions',
+      title: 'Frequently asked Questions',
       subtitle: 'FAQ Forum',
       items: {
         '1': {
           question: 'What can I do?',
-          answer: '....'
+          answer: 'With Rutana, you can optimize delivery routes, track vehicles in real-time, manage driver assignments, analyze performance metrics, and communicate seamlessly with your team and customers.'
         },
         '2': {
-          question: 'Select Occupation',
-          answer: '...'
+          question: 'Who is Rutana for?', // MODIFICADO
+          answer: 'Our platform serves logistics managers, delivery companies, transportation coordinators, fleet operators, and businesses of all sizes that need efficient route management and tracking solutions.' // MODIFICADO
         },
         '3': {
-          question: 'Select Occupation',
-          answer: '...'
+          question: 'What industries does Rutana serve?', // MODIFICADO
+          answer: 'Whether you\'re in e-commerce, food delivery, field services, or traditional logistics, Rutana adapts to your specific industry needs and workflow requirements.' // MODIFICADO
+        },
+        '4': {
+          question: 'Does Rutana integrate with my existing systems?', // NUEVO
+          answer: 'Our solution integrates with existing systems and provides customizable features to match your operational processes and business objectives.' // NUEVO
         }
       }
     },
     footer: {
-      topLeftText: 'whitepace was created for the new ways we live and work. We make a better workspace around the world',
+      title: 'Rutana', // NUEVO
+      topLeftText: 'Rutana was created for the new ways we live and work. We make the world of transportation better', // MODIFICADO
       sectionsTitle: 'Pages',
       sections: {
         home: 'Home',
-        feature: 'Feature',
+        feature: 'Benefits', // MODIFICADO
         about: 'About Us',
         plans: 'Plans',
         testimonials: 'Testimonials',
-        faq: 'FAQ'
+        faq: 'Contact' // MODIFICADO
       },
-      socialTitle: 'Social Networking',
+      socialTitle: 'Social media', // MODIFICADO
       social: {
         facebook: '@Rutana',
         instagram: '@Rutana',
@@ -263,11 +313,13 @@ const translation = {
       cards: {
         '1': {
           comment: '"Como conductor, puedo concentrarme en la carretera en lugar de preocuparme por la planificación. Todo está mapeado para mí."',
-          name: 'David R., Conductor'
+          name: 'David R., Conductor',
+          role: 'Conductor Profesional' // NUEVO
         },
         '2': {
           comment: '"Simple, inteligente y eficiente. Exactamente lo que nuestro negocio de transporte necesitaba."',
-          name: 'Emily P., Gerente'
+          name: 'Emily P., Gerente',
+          role: 'Gerente de Operaciones' // NUEVO
         }
       }
     },
@@ -277,28 +329,33 @@ const translation = {
       items: {
         '1': {
           question: '¿Qué puedo hacer?',
-          answer: '....'
+          answer: 'Con Rutana, puedes optimizar las rutas de entrega, rastrear vehículos en tiempo real, gestionar asignaciones de conductores, analizar métricas de rendimiento y comunicarte sin problemas con tu equipo y clientes.'
         },
         '2': {
-          question: 'Seleccionar ocupación',
-          answer: '...'
+          question: '¿Para quién es Rutana?', // MODIFICADO
+          answer: 'Nuestra plataforma es para gerentes de logística, empresas de mensajería, coordinadores de transporte, operadores de flotas y empresas de todos los tamaños que necesitan soluciones eficientes de gestión y seguimiento de rutas.' // MODIFICADO
         },
         '3': {
-          question: 'Seleccionar ocupación',
-          answer: '...'
+          question: '¿A qué industrias sirve Rutana?', // MODIFICADO
+          answer: 'Ya sea que te dediques al comercio electrónico, la entrega de alimentos, servicios de campo o logística tradicional, Rutana se adapta a las necesidades específicas de tu industria y a los requisitos de tu flujo de trabajo.' // MODIFICADO
+        },
+        '4': {
+          question: '¿Se integra Rutana con mis sistemas existentes?', // NUEVO
+          answer: 'Nuestra solución se integra con los sistemas existentes y proporciona características personalizables para que coincidan con tus procesos operativos y objetivos comerciales.' // NUEVO
         }
       }
     },
     footer: {
-      topLeftText: 'whitepace fue creado para las nuevas formas en que vivimos y trabajamos. Creamos mejores espacios de trabajo alrededor del mundo',
+      title: 'Rutana', // NUEVO
+      topLeftText: 'Rutana fue creado para las nuevas formas en que vivimos y trabajamos. Hacemos que el mundo del transporte sea mejor', // MODIFICADO
       sectionsTitle: 'Páginas',
       sections: {
         home: 'Inicio',
-        feature: 'Funcionalidades',
+        feature: 'Beneficios', // MODIFICADO
         about: 'Sobre Nosotros',
         plans: 'Planes',
         testimonials: 'Testimonios',
-        faq: 'Preguntas Frecuentes'
+        faq: 'Contacto' // MODIFICADO
       },
       socialTitle: 'Redes Sociales',
       social: {
@@ -315,75 +372,3 @@ const translation = {
     }
   }
 };
-
-// --- util: obtener traducción usando claves anidadas como "feature.cards.free.title"
-function getNestedTranslation(obj, key) {
-  if (!obj || !key) return undefined;
-  return key.split('.').reduce((acc, k) => (acc !== undefined ? acc[k] : undefined), obj);
-}
-
-
-// --- convierte arrays y objetos en contenido legible en el DOM
-function applyTranslationToElement(el, value) {
-  if (value === undefined || value === null) return;
-  // arrays -> si es UL/OL, renderizamos <li>, si no, los unimos por coma
-  if (Array.isArray(value)) {
-    if (el.tagName === 'UL' || el.tagName === 'OL') {
-      el.innerHTML = value.map(item => `<li>${item}</li>`).join('');
-    } else {
-      el.textContent = value.join(', ');
-    }
-    return;
-  }
-
-  // objetos -> preferimos mostrar .title o .text si existen
-  if (typeof value === 'object') {
-    if (value.title) el.textContent = value.title;
-    else if (value.text) el.textContent = value.text;
-    else el.textContent = JSON.stringify(value);
-    return;
-  }
-
-  // strings / numbers
-  el.textContent = value;
-}
-
-
-// --- función principal de traducción
-let currentLang = 'en';
-
-function translatePage(lang) {
-  const root = translation[lang];
-  if (!root) { console.warn('Language not found:', lang); return; }
-
-  document.querySelectorAll('[data-i18n]').forEach((el) => {
-    const key = el.getAttribute('data-i18n'); // e.g. "plans.cards.free.features"
-    const value = getNestedTranslation(root, key);
-    if (value !== undefined) {
-      // si es input con placeholder
-      if ((el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') && el.placeholder !== undefined) {
-        el.placeholder = typeof value === 'string' ? value : String(value);
-      } else {
-        applyTranslationToElement(el, value);
-      }
-    }
-  });
-
-  document.documentElement.lang = lang;
-  console.log('Language switched to', lang);
-}
-
-
-// --- evento del botón
-document.addEventListener('DOMContentLoaded', () => {
-  const langBtn = document.getElementById('langBtn');
-  if (langBtn) {
-    langBtn.addEventListener('click', () => {
-      currentLang = currentLang === 'en' ? 'es' : 'en';
-      translatePage(currentLang);
-    });
-  }
-
-  // traducir al cargar
-  translatePage(currentLang);
-});
