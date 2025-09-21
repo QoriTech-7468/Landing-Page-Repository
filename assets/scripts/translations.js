@@ -132,7 +132,7 @@ const translation = {
       }
     },
     footer: {
-      topLeftText: 'whitepace was created for the new ways we live and work. We make a better workspace around the world',
+      topLeftText: 'We make a better workspace around the world',
       sectionsTitle: 'Pages',
       sections: {
         home: 'Home',
@@ -290,7 +290,7 @@ const translation = {
       }
     },
     footer: {
-      topLeftText: 'whitepace fue creado para las nuevas formas en que vivimos y trabajamos. Creamos mejores espacios de trabajo alrededor del mundo',
+      topLeftText: 'Creamos mejores espacios de trabajo alrededor del mundo',
       sectionsTitle: 'Páginas',
       sections: {
         home: 'Inicio',
