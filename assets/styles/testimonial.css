@@ -1,8 +1,8 @@
 .testimonials {
-            padding: 4rem 2rem;
-            background: #043873 100%;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #0E2948 0%, #043873 100%);
             color: white;
-            min-height: 100vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
         }
@@ -15,39 +15,66 @@
         }
 
         .testimonials h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
             font-weight: 700;
+            color: white;
+        }
+
+        .testimonials-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Usa minmax para darle un ancho mínimo */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
             gap: 2rem;
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .testimonial-card {
             background: white;
             color: #333;
-            padding: 4rem;
-            min-height: 280px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            padding: 2rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             text-align: left;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
 
         .quote-icon {
             color: #3b82f6;
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            opacity: 0.8;
         }
 
         .testimonial-text {
-            font-size: 1rem;
-            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
             line-height: 1.6;
             color: #374151;
+            font-style: italic;
         }
 
         .testimonial-author {
@@ -59,40 +86,46 @@
         }
 
         .author-photo-actual {
-             width: 50px;
-             height: 50px;
-             border-radius: 50%; /* Esto las hace circulares */
-             object-fit: cover; /* Recorta la imagen para que encaje perfectamente sin distorsionarse */
-             display: block;
-         }
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #f3f4f6;
+        }
 
         .author-info h4 {
-            font-weight: 600;
-            margin-bottom: 0.25rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
             color: #1f2937;
+            font-size: 1rem;
         }
 
         .author-info p {
             color: #6b7280;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
+            font-weight: 500;
         }
 
-        .testimonial-dots {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 2rem;
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .testimonial-card {
+                padding: 2rem 1.5rem;
+                flex: none;
+            }
+            
+            .testimonials h2 {
+                font-size: 2.2rem;
+            }
         }
 
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.4);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .dot.active {
-            background: #FFFFFF;
+        @media (min-width: 769px) {
+            .testimonials-grid {
+                display: flex !important;
+                flex-direction: row !important;
+            }
         }
