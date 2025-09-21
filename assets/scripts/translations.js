@@ -114,25 +114,33 @@ const translation = {
       }
     },
     faq: {
-      title: 'Frequently ask Questions',
+      title: 'Frequently Asked Questions (FAQs)',
       subtitle: 'FAQ Forum',
       items: {
         '1': {
-          question: 'What can I do?',
-          answer: '....'
+          question: 'What is Rutana?',
+          answer: 'Rutana is a digital platform designed to help transportation companies and drivers manage routes, vehicles, and teams more efficiently. It simplifies daily operations by providing clear assignments, real-time updates, and a user-friendly interface.'
         },
         '2': {
-          question: 'Select Occupation',
-          answer: '...'
+          question: 'Who can benefit from using Rutana?',
+          answer: 'Rutana is built for logistics companies, fleet managers, and transport operators who need to organize routes, assign vehicles and drivers, and keep track of operations with better visibility and control.'
         },
         '3': {
-          question: 'Select Occupation',
-          answer: '...'
+          question: 'Do I need technical knowledge to use Rutana?',
+          answer: 'Not at all. Rutana is designed with simplicity in mind. The platform provides an intuitive dashboard where admins can set up teams and vehicles, while drivers can easily access their daily assignments.'
+        },
+        '4': {
+          question: 'Can I use Rutana on mobile devices?',
+          answer: "Yes. Rutana's landing page and web app are fully responsive, so you can access the platform on desktops, tablets, and smartphones without losing functionality."
+        },
+        '5': {
+          question: 'How does Rutana help my business grow?',
+          answer: 'By streamlining route planning, improving communication between admins and drivers, and keeping reliable historical records, Rutana reduces operational errors, saves time, and ensures that your logistics processes scale with your business needs.'
         }
       }
     },
     footer: {
-      topLeftText: 'whitepace was created for the new ways we live and work. We make a better workspace around the world',
+      topLeftText: 'We make a better workspace around the world',
       sectionsTitle: 'Pages',
       sections: {
         home: 'Home',
@@ -272,25 +280,33 @@ const translation = {
       }
     },
     faq: {
-      title: 'Preguntas Frecuentes',
+      title: 'Preguntas Frecuentes (FAQ)',
       subtitle: 'Foro de Preguntas',
       items: {
         '1': {
-          question: '¿Qué puedo hacer?',
-          answer: '....'
+          question: '¿Qué es Rutana?',
+          answer: 'Rutana es una plataforma digital diseñada para ayudar a las empresas de transporte y conductores a gestionar rutas, vehículos y equipos de manera más eficiente. Simplifica las operaciones diarias proporcionando asignaciones claras, actualizaciones en tiempo real y una interfaz fácil de usar.'
         },
         '2': {
-          question: 'Seleccionar ocupación',
-          answer: '...'
+          question: '¿Quién puede beneficiarse de usar Rutana?',
+          answer: 'Rutana está diseñada para empresas de logística, gerentes de flota y operadores de transporte que necesitan organizar rutas, asignar vehículos y conductores, y mantener un seguimiento de las operaciones con mejor visibilidad y control.'
         },
         '3': {
-          question: 'Seleccionar ocupación',
-          answer: '...'
+          question: '¿Necesito conocimientos técnicos para usar Rutana?',
+          answer: 'Para nada. Rutana está diseñada pensando en la simplicidad. La plataforma proporciona un panel intuitivo donde los administradores pueden configurar equipos y vehículos, mientras que los conductores pueden acceder fácilmente a sus asignaciones diarias.'
+        },
+        '4': {
+          question: '¿Puedo usar Rutana en dispositivos móviles?',
+          answer: 'Sí. La página de inicio y la aplicación web de Rutana son completamente responsivas, por lo que puedes acceder a la plataforma en computadoras de escritorio, tabletas y smartphones sin perder funcionalidad.'
+        },
+        '5': {
+          question: '¿Cómo ayuda Rutana a hacer crecer mi negocio?',
+          answer: 'Al optimizar la planificación de rutas, mejorar la comunicación entre administradores y conductores, y mantener registros históricos confiables, Rutana reduce errores operacionales, ahorra tiempo y asegura que tus procesos logísticos escalen con las necesidades de tu negocio.'
         }
       }
     },
     footer: {
-      topLeftText: 'whitepace fue creado para las nuevas formas en que vivimos y trabajamos. Creamos mejores espacios de trabajo alrededor del mundo',
+      topLeftText: 'Creamos mejores espacios de trabajo alrededor del mundo',
       sectionsTitle: 'Páginas',
       sections: {
         home: 'Inicio',

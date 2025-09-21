@@ -1,0 +1,249 @@
+.pricing {
+            padding: 4rem 2rem;
+            background: #FFFFFF;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+        }
+
+        .pricing h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+            font-weight: 700;
+        }
+
+        .pricing-subtitle {
+            color: #6b7280;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .pricing-grid {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: nowrap;
+        }
+
+        .pricing-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+            text-align: left;
+            width: 300px;
+            min-width: 280px;
+            max-width: 320px;
+        }
+
+        .pricing-card.featured {
+            background: #1e3a8a;
+            color: white;
+            border-color: #1e3a8a;
+            transform: scale(1.05);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            opacity: 0.7;
+            font-weight: 400;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .plan-features li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .plan-features li::before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 0.75rem;
+            width: 16px;
+        }
+
+        .pricing-card.featured .plan-features li::before {
+            color: #fbbf24;
+        }
+
+        .plan-btn {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #e5e7eb;
+            color: #374151;
+        }
+
+        .pricing-card.featured .plan-btn {
+            background: #fbbf24;
+            color: #1e3a8a;
+        }
+
+        .plan-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Responsive design */
+        @media (max-width: 1200px) {
+            .pricing-card {
+                padding: 1.75rem;
+            }
+            
+            .plan-name {
+                font-size: 1.4rem;
+            }
+            
+            .plan-price {
+                font-size: 2.2rem;
+            }
+            
+            .plan-features li {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .pricing-card {
+                padding: 1.5rem;
+                width: 280px;
+                min-width: 260px;
+                max-width: 300px;
+            }
+            
+            .plan-name {
+                font-size: 1.3rem;
+            }
+            
+            .plan-price {
+                font-size: 2rem;
+            }
+            
+            .plan-features li {
+                font-size: 0.85rem;
+                padding: 0.6rem 0;
+            }
+        }
+
+        @media (max-width: 920px) {
+            .pricing-grid {
+                flex-direction: column;
+                gap: 1.5rem;
+                align-items: center;
+            }
+            
+            .pricing-card {
+                width: 100%;
+                max-width: 400px;
+                min-width: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pricing-card {
+                padding: 1.5rem;
+                max-width: 350px;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-5px);
+            }
+            
+            .plan-name {
+                font-size: 1.25rem;
+            }
+            
+            .plan-price {
+                font-size: 1.8rem;
+            }
+            
+            .plan-features li {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pricing {
+                padding: 2rem 1rem;
+            }
+            
+            .pricing-card {
+                padding: 1.25rem;
+            }
+            
+            .plan-name {
+                font-size: 1.2rem;
+            }
+            
+            .plan-price {
+                font-size: 1.6rem;
+            }
+            
+            .plan-features li {
+                font-size: 0.85rem;
+                padding: 0.5rem 0;
+            }
+            
+            .plan-btn {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+        }
