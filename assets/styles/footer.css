@@ -1,5 +1,5 @@
         .footer {
-            background: #043873 100%;
+            background: #0E2948;
             color: white;
             padding: 3rem 2rem 1rem;
         }
@@ -8,26 +8,62 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr;
             gap: 3rem;
         }
 
-        .footer-main h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+        .footer-right-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
         }
 
-        .footer-main p {
-            opacity: 0.9;
+        .footer-main {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .footer-logo img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .footer-brand {
+            flex: 1;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .footer-brand p {
+            opacity: 0.8;
             line-height: 1.6;
             font-size: 0.95rem;
+            color: #ccc;
         }
 
         .footer-section h4 {
             margin-bottom: 1rem;
             font-weight: 600;
-            color: #fbbf24;
+            color: white;
+            font-size: 1rem;
         }
 
         .footer-section ul {
@@ -35,11 +71,11 @@
         }
 
         .footer-section ul li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
 
         .footer-section ul li a {
-            color: white;
+            color: #ccc;
             text-decoration: none;
             opacity: 0.8;
             transition: opacity 0.3s ease;
@@ -53,20 +89,26 @@
         .social-links {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 0.25rem;
         }
 
         .social-links a {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: white;
         }
 
         .footer-bottom {
             margin-top: 2rem;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-            opacity: 0.7;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            text-align: left;
+            opacity: 0.8;
             font-size: 0.85rem;
+            color: #ccc;
         }
