@@ -80,3 +80,162 @@ dots.forEach((dot, index) => {
         dot.classList.add('active');
     });
 });
+
+// Active navigation highlighting based on scroll position
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('.page-section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+        
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.href.includes(current)) {
+            link.classList.add('active');
+        }
+    });
+});
+
+    // Page navigation with smooth transitions
+    let currentPage = 'home';
+
+     function showPage(pageName) {
+        // Hide current page
+        const currentSection = document.getElementById(currentPage);
+        if (currentSection) {
+            currentSection.classList.remove('active');
+        }
+
+        // Show new page
+        const newSection = document.getElementById(pageName);
+        if (newSection) {
+            setTimeout(() => {
+                newSection.classList.add('active');
+            }, 150);
+        }
+
+            currentPage = pageName;
+
+            // Update header background based on page
+            const header = document.querySelector('.header');
+            if (pageName === 'home' || pageName === 'testimonials') {
+                header.style.background = 'rgba(30, 58, 138, 0.9)';
+            } else {
+                header.style.background = '#1e3a8a';
+            }
+        }
+
+// FAQ toggle functionality
+function toggleFaq(element) {
+    const faqItem = element.parentElement;
+    const wasActive = faqItem.classList.contains('active');
+    
+    // Close all other FAQs
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    
+    // Toggle current FAQ
+    if (!wasActive) {
+        faqItem.classList.add('active');
+    }
+}
+
+// Smooth header transition on scroll
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 50) {
+        header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.15)';
+        header.style.backdropFilter = 'blur(10px)';
+    } else {
+        header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        header.style.backdropFilter = 'none';
+    }
+});
+
+
+// Enhanced hover effects for cards
+document.querySelectorAll('.service-card, .pricing-card, .team-member').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = this.classList.contains('featured') ? 
+            'scale(1.05) translateY(-8px)' : 'translateY(-8px)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = this.classList.contains('featured') ? 
+            'scale(1.05)' : 'translateY(0)';
+    });
+});
+
+// Mobile menu toggle
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('mobile-active');
+}
+
+    // Add mobile styles if needed
+    if (window.innerWidth <= 768) {
+        const nav = document.querySelector('.nav');
+        const mobileMenuBtn = document.createElement('button');
+        mobileMenuBtn.innerHTML = '☰';
+        mobileMenuBtn.style.cssText = `
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: block;
+            @media (min-width: 769px) { display: none; }
+        `;
+        mobileMenuBtn.onclick = toggleMobileMenu;
+        nav.appendChild(mobileMenuBtn);
+    }
+
+    // Performance optimization
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', () => {
+        showPage('home');
+        
+        // Add loading animation
+        document.querySelectorAll('.service-card, .about-item, .team-member').forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.1}s`;
+        });
+    });
+
+    // Click tracking for analytics
+    function trackClick(elementName, action) {
+        console.log(`Tracking: ${elementName} - ${action}`);
+    }
+
+    // Add event listeners for tracking
+    document.querySelectorAll('.btn-primary, .plan-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            trackClick('CTA Button', e.target.textContent);
+        });
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            trackClick('Navigation', e.target.textContent);
+        });
+    });
+
