@@ -31,10 +31,11 @@
             flex-direction: row;
             justify-content: center;
             align-items: stretch;
-            gap: 2rem;
+            gap: 1.5rem;
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+            flex-wrap: nowrap;
         }
 
         .pricing-card {
@@ -45,8 +46,9 @@
             position: relative;
             transition: all 0.3s ease;
             text-align: left;
-            flex: 1;
-            min-width: 0;
+            width: 300px;
+            min-width: 280px;
+            max-width: 320px;
         }
 
         .pricing-card.featured {
@@ -150,11 +152,16 @@
 
         @media (max-width: 1024px) {
             .pricing-grid {
-                gap: 1.5rem;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
             }
             
             .pricing-card {
                 padding: 1.5rem;
+                width: 280px;
+                min-width: 260px;
+                max-width: 300px;
             }
             
             .plan-name {
@@ -171,15 +178,24 @@
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 920px) {
             .pricing-grid {
                 flex-direction: column;
                 gap: 1.5rem;
+                align-items: center;
             }
             
             .pricing-card {
-                flex: none;
+                width: 100%;
+                max-width: 400px;
+                min-width: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pricing-card {
                 padding: 1.5rem;
+                max-width: 350px;
             }
             
             .pricing-card.featured {
@@ -229,4 +245,5 @@
                 padding: 0.8rem;
                 font-size: 0.9rem;
             }
+        }
         }

@@ -86,8 +86,8 @@
         }
 
         .author-photo-actual {
-            width: 50px;
-            height: 50px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid #f3f4f6;
@@ -120,6 +120,11 @@
             
             .testimonials h2 {
                 font-size: 2.2rem;
+            }
+            
+            .author-photo-actual {
+                width: 60px;
+                height: 60px;
             }
         }
 
