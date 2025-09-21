@@ -1,0 +1,65 @@
+.team {
+            padding: 1rem 1rem;
+            background: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .team-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+        }
+
+        .team h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+            font-weight: 700;
+        }
+
+        .team-subtitle {
+            color: #6b7280;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+        }
+
+        .team-member {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+       .member-photo-actual {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* Esto las hace circulares */
+            object-fit: cover; /* Recorta la imagen para que encaje sin distorsionarse */
+            display: block;
+            margin: 0 auto 1rem;
+            border: 4px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+         }
+
+        .member-name {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .member-role {
+            color: #6b7280;
+            font-size: 0.85rem;
+        }
