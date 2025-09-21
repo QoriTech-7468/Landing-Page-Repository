@@ -226,58 +226,60 @@
     <!-- FAQ SECTION -->
     <section id="faq" class="page-section faq">
           <div class="faq-content">
-                <div class="faq-header">
-                    <div class="faq-icon">
-                    <img src="./assets/img/logo/logo azul.png" alt="Logo de Rutana">
-                      </div>
-                     <h2 data-i18n="faq.title">Frequently asked Questions</h2>
-                   </div>
-                <div class="faq-list">
-                      <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.1.question">
-                                  What can I do with Rutana?
-                                  <span class="faq-arrow">▼</span>
-                              </div>
-                            <div class="faq-answer">
-                                  <p data-i18n="faq.items.1.answer">With Rutana, you can optimize delivery routes, track
-                vehicles in real-time, manage driver assignments, analyze performance metrics, and communicate
-                seamlessly with your team and customers.</p>
-                              </div>
-                        </div>
-                      <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.2.question">
-                                  Who is Rutana for?
-                                  <span class="faq-arrow">▼</span>
-                              </div>
-                            <div class="faq-answer">
-                                  <p data-i18n="faq.items.2.answer">Our platform serves logistics managers, delivery
-                companies, transportation coordinators, fleet operators, and businesses of all sizes that need efficient
-                route management and tracking solutions.</p>
-                              </div>
-                        </div>
-                      <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.3.question">
-                                  What industries does Rutana serve?
-                                  <span class="faq-arrow">▼</span>
-                              </div>
-                            <div class="faq-answer">
-                                  <p data-i18n="faq.items.3.answer">Whether you're in e-commerce, food delivery, field
-                services, or traditional logistics, Rutana adapts to your specific industry needs and workflow
-                requirements.</p>
-                              </div>
-                        </div>
-                      <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.4.question">
-                                  Does Rutana integrate with my existing systems?
-                                  <span class="faq-arrow">▼</span>
-                              </div>
-                            <div class="faq-answer">
-                                  <p data-i18n="faq.items.4.answer">Our solution integrates with existing systems and
-                provides customizable features to match your operational processes and business objectives.</p>
-                              </div>
-                        </div>
-                  </div>
-            </div>
+         <div class="faq-header">
+           <div class="faq-icon">
+             <img src="./assets/img/logo/logo azul.png" alt="Logo de Rutana">
+               </div>
+            <h2 data-i18n="faq.title">Frequently ask Questions</h2>
+           </div>
+         <div class="faq-list">
+           <div class="faq-item">
+               <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.1.question">
+                 What is Rutana?
+                 <span class="faq-arrow">▼</span>
+               </div>
+               <div class="faq-answer">
+                 <p data-i18n="faq.items.1.answer">Rutana is a digital platform designed to help transportation companies and drivers manage routes, vehicles, and teams more efficiently. It simplifies daily operations by providing clear assignments, real-time updates, and a user-friendly interface.</p>
+               </div>
+           </div>
+           <div class="faq-item">
+               <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.2.question">
+                 Who can benefit from using Rutana?
+                 <span class="faq-arrow">▼</span>
+               </div>
+               <div class="faq-answer">
+                 <p data-i18n="faq.items.2.answer">Rutana is built for logistics companies, fleet managers, and transport operators who need to organize routes, assign vehicles and drivers, and keep track of operations with better visibility and control.</p>
+               </div>
+           </div>
+           <div class="faq-item">
+               <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.3.question">
+                 Do I need technical knowledge to use Rutana?
+                 <span class="faq-arrow">▼</span>
+               </div>
+               <div class="faq-answer">
+                 <p data-i18n="faq.items.3.answer">Not at all. Rutana is designed with simplicity in mind. The platform provides an intuitive dashboard where admins can set up teams and vehicles, while drivers can easily access their daily assignments.</p>
+               </div>
+           </div>
+           <div class="faq-item">
+               <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.4.question">
+                 Can I use Rutana on mobile devices?
+                 <span class="faq-arrow">▼</span>
+               </div>
+               <div class="faq-answer">
+                 <p data-i18n="faq.items.4.answer">Yes. Rutana's landing page and web app are fully responsive, so you can access the platform on desktops, tablets, and smartphones without losing functionality.</p>
+               </div>
+           </div>
+           <div class="faq-item">
+               <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.5.question">
+                 How does Rutana help my business grow?
+                 <span class="faq-arrow">▼</span>
+               </div>
+               <div class="faq-answer">
+                 <p data-i18n="faq.items.5.answer">By streamlining route planning, improving communication between admins and drivers, and keeping reliable historical records, Rutana reduces operational errors, saves time, and ensures that your logistics processes scale with your business needs.</p>
+               </div>
+           </div>
+         </div>
+     </div>
     </section>
 
     <!-- FOOTER -->
@@ -328,6 +330,42 @@
   </main>
 
   <script src="/assets/scripts/translations.js" defer></script>
+  <script>
+    function toggleFaq(element) {
+      console.log('FAQ clicked'); // Debug log
+      
+      const faqItem = element.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      
+      console.log('Is active:', isActive); // Debug log
+      
+      // Close all FAQ items first
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+        const arrow = item.querySelector('.faq-arrow');
+        if (arrow) {
+          arrow.textContent = '▼';
+        }
+      });
+      
+      // If this item wasn't active, open it
+      if (!isActive) {
+        console.log('Opening FAQ item'); // Debug log
+        faqItem.classList.add('active');
+        const arrow = element.querySelector('.faq-arrow');
+        if (arrow) {
+          arrow.textContent = '▲';
+        }
+      } else {
+        console.log('Closing FAQ item'); // Debug log
+      }
+    }
+
+    // Ensure the function is available when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('FAQ script loaded');
+    });
+  </script>
 </body>
 
 </html>
