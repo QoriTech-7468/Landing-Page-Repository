@@ -36,7 +36,7 @@
   <header>
     <nav class="navbar">
       <div class="navbar__logo">
-        <img src="./assets/img/logo/logo azul.png" alt="Rutana Logo" />
+        <img src="./assets/img/logo/logo blanco.png" alt="Rutana Logo" />
       </div>
       <button class="navbar__toggle" id="navToggle" aria-label="Menú">
         <span class="material-icons">menu</span>
@@ -53,6 +53,7 @@
         </ul>
       </div>
       <div class="navbar_actions">
+        <a href="#getstarted" class="btn-get-started" data-i18n="navbar.getstarted">Get Started</a>
         <button class="lang-btn" id="langBtn" aria-label="Cambiar idioma">
           <span class="material-icons">language</span>
         </button>
@@ -60,6 +61,9 @@
     </nav>
 
     <!-- HERO -->
+  </header>
+  
+  <main>
     <section class="hero" id="home">
       <div class="hero-content">
         <div class="hero-text">
@@ -74,19 +78,40 @@
             free trial</button>
         </div>
         <div class="hero-image">
-          <img src="" alt="Rutana hero" />
+          <img src="./assets/img/features/hero-image.png" alt="Rutana hero" />
         </div>
       </div>
     </section>
-  </header>
-  <main>
     <!-- FEATURE SECTION -->
-    <section id="feature" class="feature-section">
-      <h2 data-i18n="feaTure.title">Meet our value</h2>
-      <p data-i18n="feaTure.description">Take control of your business</p>
-      <div id="feature-cards" class="cards-container">
-        <!-- Cards dynamically generated via JS -->
-      </div>
+    <!-- Features Page landing-->
+    <section id="features" class="page-section services">
+        <div class="services-content">
+            <h2 data-i18n="services.title">Meet our value</h2>
+            <p class="services-subtitle" data-i18n="services.subtitle">Take the stress out of your business</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="./assets/img/features/smart-routes.png" alt="Smart Route Management" class="service-image-actual">
+                    <div class="service-content">
+                        <h3 data-i18n="services.cards.1.title">Smart Route Management</h3>
+                        <p data-i18n="services.cards.1.description">Optimize delivery routes in real-time using advanced algorithms that consider traffic, distance, and delivery priorities.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="./assets/img/features/constructor.png" alt="Tracking" class="service-image-actual">
+                    <div class="service-content">
+                        <h3 data-i18n="services.cards.2.title">Tracking</h3>
+                        <p data-i18n="services.cards.2.description">Real-time GPS tracking and monitoring of all your delivery vehicles and packages with live updates.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="./assets/img/features/notes.png" alt="Instant Communications" class="service-image-actual">
+                    <div class="service-content">
+                        <h3 data-i18n="services.cards.3.title">Instant Communications</h3>
+                        <p data-i18n="services.cards.3.description">Seamless communication between drivers, dispatchers, and customers through our integrated messaging system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     
 <section id="about" class="page-section about">

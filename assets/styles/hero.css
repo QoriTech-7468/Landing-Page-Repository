@@ -6,9 +6,9 @@
 
 /* Hero Section - Image 1 */
 .hero {
-  background: #043873 100%;
+  background: #043873;
   color: white;
-  padding: 2rem 2rem;
+  padding: 6rem 2rem 4rem;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -31,7 +31,7 @@
   line-height: 1.1;
 }
 
-.hero-subtitle {
+.subtitle {
   color: #fbbf24;
   font-size: 1rem;
   margin-bottom: 1rem;
@@ -46,30 +46,67 @@
   line-height: 1.6;
 }
 
-.hero-btn {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+.btn-start {
+  background: white;
+  color: #043873;
   padding: 1rem 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: none;
   border-radius: 6px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
+  font-size: 1rem;
 }
 
-.hero-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+.btn-start:hover {
+  background: #f8f9fa;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.hero-image-actual {
-  /* Mismas propiedades de tamaño y borde del diseño original */
-  width: 100%; /* Ocupa el 100% del contenedor padre */
-  border-radius: 12px; /* Borde redondeado */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Sombra para el efecto de elevación */
-  display: block; /* Asegura que no haya espacios extra */
-  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  display: block;
+  object-fit: cover;
   height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1rem 2rem;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+  }
+  
+  .hero-image {
+    order: -1;
+  }
+  
+  .hero-image img {
+    max-width: 300px;
+  }
 }

@@ -15,21 +15,21 @@ const translation = {
       description: 'Planing, delegating and report!\nOur platform helps your company with planing the best routes, simplify the rol assignment and get a full report of the whole situation.\nGet on the rode and make your company the fastest there is!',
       btnStart: 'Try free trial'
     },
-    feaTure: {
+    services: {
       title: 'Meet our value',
-      description: 'Take the control of your business',
+      subtitle: 'Take the stress out of your business',
       cards: {
-        smartRoute: {
+        '1': {
           title: 'Smart Route Management',
-          text: 'Optimize routes in real time considering traffic, weather, and road conditions.'
+          description: 'Optimize delivery routes in real-time using advanced algorithms that consider traffic, distance, and delivery priorities.'
         },
-        tracking: {
-          title: "Tracking",
-          text: "Allow companies how their teams are performing during the day"
+        '2': {
+          title: 'Tracking',
+          description: 'Real-time GPS tracking and monitoring of all your delivery vehicles and packages with live updates.'
         },
-        installC: {
-          title: "Instant Communication",
-          text: "Direct channel between drivers, managers, and clients to coordinate changes or solve issues."
+        '3': {
+          title: 'Instant Communications',
+          description: 'Seamless communication between drivers, dispatchers, and customers through our integrated messaging system.'
         }
       }
     },
@@ -181,21 +181,21 @@ const translation = {
       description: '¡Planificación, delegación e informes!\nNuestra plataforma ayuda a tu empresa a planificar las mejores rutas, simplificar la asignación de roles y obtener un informe completo de toda la situación.\n¡Ponte en marcha y haz que tu empresa sea la más rápida!',
       btnStart: 'Prueba gratuita'
     },
-    feaTure: {
+    services: {
       title: 'Conoce nuestro valor',
-      description: 'Toma el control de tu negocio',
+      subtitle: 'Elimina el estrés de tu negocio',
       cards: {
-        smartRoute: {
+        '1': {
           title: 'Gestión Inteligente de Rutas',
-          text: 'Optimiza las rutas en tiempo real considerando el tráfico, el clima y las condiciones de las vías.'
+          description: 'Optimiza las rutas de entrega en tiempo real utilizando algoritmos avanzados que consideran el tráfico, la distancia y las prioridades de entrega.'
         },
-        tracking: {
-          title: "Seguimiento",
-          text: "Permite a las empresas ver cómo se desempeñan sus equipos durante el día."
+        '2': {
+          title: 'Seguimiento',
+          description: 'Seguimiento y monitoreo GPS en tiempo real de todos tus vehículos de entrega y paquetes con actualizaciones en vivo.'
         },
-        installC: {
-          title: "Comunicación Instantánea",
-          text: "Canal directo entre conductores, gerentes y clientes para coordinar cambios o resolver problemas."
+        '3': {
+          title: 'Comunicaciones Instantáneas',
+          description: 'Comunicación fluida entre conductores, despachadores y clientes a través de nuestro sistema de mensajería integrado.'
         }
       }
     },
