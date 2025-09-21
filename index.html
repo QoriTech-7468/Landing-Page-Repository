@@ -79,43 +79,112 @@
       </div>
     </section>
 
-    <!-- ABOUT US SECTION -->
-    <section id="about-us" class="about-us-section">
-      <h2 data-i18n="aboutUS.title">About Us</h2>
-      <div id="about-us-cards" class="cards-container">
-        <!-- Cards dynamically generated via JS -->
-      </div>
+<section id="about" class="page-section about">
+        <div class="about-content">
+            <h2 data-i18n="aboutUS.title">About us</h2>
+            <div class="about-grid">
+                <div class="about-item">
+                    <div class="about-icon"></div>
+                    <h3 data-i18n="aboutUS.cards.help.title">How We Help</h3>
+                    <p data-i18n="aboutUS.cards.help.text">We empower transport companies and drivers with a smart, easy-to-use platform that simplifies logistics, ensures real-time visibility, and improves communication with clients. Our app reduces inefficiencies, saves time, and builds trust through transparent operation</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon"></div>
+                    <h3 data-i18n="aboutUS.cards.mission.title">Mission & Vision</h3>
+                    <p data-i18n="aboutUS.cards.mission.text">Our mission is to simplify and optimize transportation by providing drivers and companies with efficient, transparent, and reliable digital tools. With the vision of becoming the leading transportation ecosystem in Latin America, we aim to connect people, businesses, and products through innovative, technology-driven solutions.</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon"></div>
+                    <h3 data-i18n="aboutUS.cards.value.title">Value Proposition</h3>
+                    <p data-i18n="aboutUS.cards.value.text">Our value lies in delivering smarter logistics, real-time visibility, and cost savings, while strengthening trust and efficiency across the entire supply chain. We help transporters and companies streamline their operations, reduce complexity, and ensure seamless communication with clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <h3 data-i18n="team.title">Our Team</h3>
-      <p data-i18n="team.description">Learn more about our partners</p>
-      <div id="team-cards" class="cards-container">
-        <!-- Team dynamically generated via JS -->
-      </div>
-    </section>
+  
+  <!-- PLANS -->
+        <section id="plans" class="page-section pricing">
+        <div class="pricing-content">
+            <h2 data-i18n="pLans.title">Choose Your Plan</h2>
+            <p class="pricing-subtitle" data-i18n="pLans.description">Rutana has the right plan for you</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-name" data-i18n="pLans.cards.free.title">Free</div>
+                    <div class="plan-price" data-i18n="pLans.cards.free.text">$0<span> / month</span></div>
+                    <ul class="plan-features" data-i18n="pLans.cards.free.features">
+                        <li>Limit 10 users</li>
+                        <li>Basic route management</li>
+                        <li>Real-time tracking</li>
+                        <li>Email support</li>
+                    </ul>
+                    <button class="plan-btn" data-i18n="pLans.cards.free.btnstarted">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="plan-name" data-i18n="pLans.cards.professional.title">Professional Plan</div>
+                    <div class="plan-price" data-i18n="pLans.cards.professional.text">$50<span> / month</span></div>
+                    <ul class="plan-features" data-i18n="pLans.cards.professional.features">
+                        <li>50 users available</li>
+                        <li>All features from Free Plan</li>
+                        <li>Detailed reports</li>
+                        <li>Priority customer supports</li>
+                    </ul>
+                    <button class="plan-btn" data-i18n="pLans.cards.professional.btnstarted">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="plan-name" data-i18n="pLans.cards.enterprise.title">Enterprise Plan</div>
+                    <div class="plan-price" data-i18n="pLans.cards.enterprise.text">Contact us</div>
+                    <ul class="plan-features" data-i18n="pLans.cards.enterprise.features">
+                        <li>Users according to your needs</li>
+                        <li>All features</li>
+                        <li>Dedicated account manager</li>
+                        <li>Premium support</li>
+                    </ul>
+                    <button class="plan-btn" data-i18n="pLans.cards.enterprise.btnstarted">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!-- TESTIMONIALS -->
+        <section id="testimonials" class="page-section testimonials">
+        <div class="testimonials-content">
+            <h2 data-i18n="testimonials.title">Testimonials</h2>
+            <p class="testimonials-subtitle" data-i18n="testimonials.description">Hear what our users say about how Restock has transformed their business, helping them manage inventory smarter and reach their goals with greater peace of mind and confidence.</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">❝</div>
+                    <p class="testimonial-text" data-i18n="testimonials.cards.1.comment">As a driver, I can focus on the road instead of worrying about planning. Everything is mapped out for me.</p>
+                    <div class="testimonial-author">
+                        <img src="./images/driver2.png" alt="Foto del cliente" class="author-photo-actual">
+                        <div class="author-info">
+                            <h4 data-i18n="testimonials.cards.1.name">David R., Driver</h4>
+                            <p data-i18n="testimonials.cards.1.role">Professional Driver</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">❝</div>
+                    <p class="testimonial-text" data-i18n="testimonials.cards.2.comment">Simple, smart, and efficient. Exactly what our transport business needed.</p>
+                    <div class="testimonial-author">
+                        <img src="./images/admin.png" alt="Foto del cliente" class="author-photo-actual">
+                        <div class="author-info">
+                            <h4 data-i18n="testimonials.cards.2.name">Emily P., Manager</h4>
+                            <p data-i18n="testimonials.cards.2.role">Operations Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </section>
 
-    <!-- PLANS SECTION -->
-    <section id="plans" class="plans-section">
-      <h2 data-i18n="pLans.title">Choose Your Plan</h2>
-      <p data-i18n="pLans.description">Rutana has the right plan for you.</p>
-      <div id="plans-cards" class="cards-container">
-        <!-- Plan cards dynamically generated via JS -->
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS SECTION -->
-    <section id="testimonials" class="testimonials-section">
-      <h2 data-i18n="testimonials.title">Testimonials</h2>
-      <p data-i18n="testimonials.description">
-        Hear what our users say about how Restock has transformed their business.
-      </p>
-      <div id="testimonials-cards" class="cards-container">
-        <!-- Testimonials dynamically generated via JS -->
-      </div>
-    </section>
 
     <!-- FAQ SECTION -->
     <section id="faq" class="page-section faq">
-        <div class="faq-content">
+          <div class="faq-content">
                 <div class="faq-header">
                     <div class="faq-icon">
                     <img src="./images/logo qori.jpg" alt="Logo de Rutana">
