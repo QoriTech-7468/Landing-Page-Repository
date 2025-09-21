@@ -1,7 +1,7 @@
 .team {
-            padding: 1rem 1rem;
+            padding: 3rem 2rem;
             background: #f8fafc;
-            min-height: 100vh;
+            min-height: auto;
             display: flex;
             align-items: center;
         }
@@ -14,22 +14,25 @@
         }
 
         .team h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
             color: #1f2937;
             font-weight: 700;
         }
 
         .team-subtitle {
             color: #6b7280;
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            font-size: 1rem;
         }
 
         .team-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 2rem;
+            gap: 1.5rem;
+            align-items: start;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .team-member {
@@ -42,24 +45,138 @@
         }
 
        .member-photo-actual {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%; /* Esto las hace circulares */
-            object-fit: cover; /* Recorta la imagen para que encaje sin distorsionarse */
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
             display: block;
-            margin: 0 auto 1rem;
-            border: 4px solid white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin: 0 auto 0.75rem;
+            border: 3px solid white;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+         }
+
+         .member-photo-actual:hover {
+            transform: scale(1.05);
          }
 
         .member-name {
             font-weight: 600;
             color: #1f2937;
-            margin-bottom: 0.25rem;
-            font-size: 1rem;
+            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
         }
 
         .member-role {
             color: #6b7280;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .team-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 1rem;
+            }
+            
+            .member-photo-actual {
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .team {
+                padding: 2.5rem 1.5rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+                max-width: 800px;
+            }
+            
+            .member-photo-actual {
+                width: 95px;
+                height: 95px;
+            }
+            
+            .team h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .team {
+                padding: 2.5rem 2rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .member-photo-actual {
+                width: 85px;
+                height: 85px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team {
+                padding: 2rem 1.5rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .member-photo-actual {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .team h2 {
+                font-size: 1.8rem;
+                margin-bottom: 0.3rem;
+            }
+            
+            .team-subtitle {
+                margin-bottom: 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .team {
+                padding: 1.5rem 1rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            
+            .member-photo-actual {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .team h2 {
+                font-size: 1.6rem;
+            }
+            
+            .team-subtitle {
+                font-size: 0.85rem;
+                margin-bottom: 1.25rem;
+            }
+            
+            .member-name {
+                font-size: 0.85rem;
+            }
+            
+            .member-role {
+                font-size: 0.75rem;
+            }
         }
