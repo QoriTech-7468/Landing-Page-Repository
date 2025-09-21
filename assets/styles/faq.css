@@ -1,0 +1,92 @@
+/* FAQ Section - Image 7 */
+        .faq {
+            padding: 4rem 2rem;
+            background: #FFFFFF;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            padding-top: 6rem;
+        }
+
+        .faq-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            width: 100%;
+        }
+
+        .faq-header {
+            text-align: left;
+        }
+
+       .faq-icon img {
+           width: 80px;
+           height: 80px;
+           object-fit: contain;
+           display: block;
+        }
+
+        .faq h2 {
+            font-size: 2.5rem;
+            color: #1f2937;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            background: #f9fafb;
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            color: #374151;
+        }
+
+        .faq-question:hover {
+            background: #f3f4f6;
+        }
+
+        .faq-arrow {
+            transition: transform 0.3s ease;
+            color: #9ca3af;
+        }
+
+        .faq-item.active .faq-arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 1.25rem 1.5rem;
+        }
+
+        .faq-answer p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
