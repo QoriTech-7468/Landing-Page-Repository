@@ -15,9 +15,10 @@
   <meta name="copyright" content="Qoritech 2025">
 
   <!-- Fonts -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
   <!-- Styles -->
   <link rel="stylesheet" href="assets/styles/faq.css" />
   <link rel="stylesheet" href="assets/styles/footer.css" />
@@ -29,7 +30,7 @@
   <link rel="stylesheet" href="assets/styles/services.css" />
   <link rel="stylesheet" href="assets/styles/hero.css" />
   <link rel="stylesheet" href="assets/styles/header.css" />
-  
+
 </head>
 
 <body>
@@ -37,7 +38,7 @@
   <header>
     <nav class="navbar">
       <div class="navbar__logo">
-        <img src="./assets/img/logo/logo blanco.png" alt="Rutana Logo" />
+        <img src="assets/img/logo/logo blanco.png" alt="Rutana Logo" />
       </div>
       <button class="navbar__toggle" id="navToggle" aria-label="Menú">
         <span class="material-icons">menu</span>
@@ -54,7 +55,8 @@
         </ul>
       </div>
       <div class="navbar_actions">
-        <a href="#getstarted" class="btn-get-started" data-i18n="navbar.getstarted">Get Started</a>
+        <a href="https://rutana-app-frontend.web.app/management/routes/list" class="btn-get-started" target="_blank"
+          data-i18n="navbar.getstarted">Get Started</a>
         <button class="lang-btn" id="langBtn" aria-label="Cambiar idioma">
           <span class="material-icons">language</span>
         </button>
@@ -63,7 +65,7 @@
 
     <!-- HERO -->
   </header>
-  
+
   <main>
     <section class="hero" id="home">
       <div class="hero-content">
@@ -75,297 +77,340 @@
             Our platform helps your company plan the best routes, simplify role assignment and get full reports.<br>
             Get on the road and make your company the fastest there is!
           </p>
-          <button class="btn-start" data-i18n="hero.btnStart" onclick="window.location.href='access.html#signup'">Try
-            free trial</button>
+          <button class="btn-start" data-i18n="hero.btnStart"
+            onclick="window.open('https://rutana-app-frontend.web.app/management/routes/list', '_blank')">
+            Try free trial
+          </button>
         </div>
         <div class="hero-image">
-          <img src="./assets/img/features/hero-image.png" alt="Rutana hero" />
+          <img src="assets/img/features/hero-image.png" alt="Rutana hero" />
         </div>
       </div>
     </section>
     <!-- FEATURE SECTION -->
     <!-- Features Page landing-->
     <section id="features" class="page-section services">
-        <div class="services-content">
-            <h2 data-i18n="services.title">Meet our value</h2>
-            <p class="services-subtitle" data-i18n="services.subtitle">Take the stress out of your business</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="./assets/img/features/smart-routes.png" alt="Smart Route Management" class="service-image-actual">
-                    <div class="service-content">
-                        <h3 data-i18n="services.cards.1.title">Smart Route Management</h3>
-                        <p data-i18n="services.cards.1.description">Optimize delivery routes in real-time using advanced algorithms that consider traffic, distance, and delivery priorities.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="./assets/img/features/constructor.png" alt="Tracking" class="service-image-actual">
-                    <div class="service-content">
-                        <h3 data-i18n="services.cards.2.title">Tracking</h3>
-                        <p data-i18n="services.cards.2.description">Real-time GPS tracking and monitoring of all your delivery vehicles and packages with live updates.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="./assets/img/features/notes.png" alt="Instant Communications" class="service-image-actual">
-                    <div class="service-content">
-                        <h3 data-i18n="services.cards.3.title">Instant Communications</h3>
-                        <p data-i18n="services.cards.3.description">Seamless communication between drivers, dispatchers, and customers through our integrated messaging system.</p>
-                    </div>
-                </div>
+      <div class="services-content">
+        <h2 data-i18n="services.title">Meet our value</h2>
+        <p class="services-subtitle" data-i18n="services.subtitle">Take the stress out of your business</p>
+        <div class="services-grid">
+          <div class="service-card">
+            <img src="assets/img/features/smart-routes.png" alt="Smart Route Management" class="service-image-actual">
+            <div class="service-content">
+              <h3 data-i18n="services.cards.1.title">Smart Route Management</h3>
+              <p data-i18n="services.cards.1.description">Optimize delivery routes in real-time using advanced
+                algorithms that consider traffic, distance, and delivery priorities.</p>
             </div>
+          </div>
+          <div class="service-card">
+            <img src="assets/img/features/constructor.png" alt="Tracking" class="service-image-actual">
+            <div class="service-content">
+              <h3 data-i18n="services.cards.2.title">Tracking</h3>
+              <p data-i18n="services.cards.2.description">Real-time GPS tracking and monitoring of all your delivery
+                vehicles and packages with live updates.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="assets/img/features/notes.png" alt="Instant Communications" class="service-image-actual">
+            <div class="service-content">
+              <h3 data-i18n="services.cards.3.title">Instant Communications</h3>
+              <p data-i18n="services.cards.3.description">Seamless communication between drivers, dispatchers, and
+                customers through our integrated messaging system.</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-    
-<section id="about" class="page-section about">
-        <div class="about-content">
-            <h2 data-i18n="aboutUS.title">About us</h2>
-            <div class="about-grid">
-                <div class="about-item">
-                    <div class="about-icon"></div>
-                    <h3 data-i18n="aboutUS.cards.help.title">How We Help</h3>
-                    <p data-i18n="aboutUS.cards.help.text">We empower transport companies and drivers with a smart, easy-to-use platform that simplifies logistics, ensures real-time visibility, and improves communication with clients. Our app reduces inefficiencies, saves time, and builds trust through transparent operation</p>
-                </div>
-                <div class="about-item">
-                    <div class="about-icon"></div>
-                    <h3 data-i18n="aboutUS.cards.mission.title">Mission & Vision</h3>
-                    <p data-i18n="aboutUS.cards.mission.text">Our mission is to simplify and optimize transportation by providing drivers and companies with efficient, transparent, and reliable digital tools. With the vision of becoming the leading transportation ecosystem in Latin America, we aim to connect people, businesses, and products through innovative, technology-driven solutions.</p>
-                </div>
-                <div class="about-item">
-                    <div class="about-icon"></div>
-                    <h3 data-i18n="aboutUS.cards.value.title">Value Proposition</h3>
-                    <p data-i18n="aboutUS.cards.value.text">Our value lies in delivering smarter logistics, real-time visibility, and cost savings, while strengthening trust and efficiency across the entire supply chain. We help transporters and companies streamline their operations, reduce complexity, and ensure seamless communication with clients.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-  <!-- TEAM -->
-           <section id="team" class="page-section team">
-        <div class="team-content">
-            <h2 data-i18n="team.title">Our Team</h2>
-            <p class="team-subtitle" data-i18n="team.description">Learn more about our partners</p>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="./assets/img/team/Jesus.jpg" alt="Jesus" class="member-photo-actual">
-                    <div class="member-name" data-i18n="team.julio">Jesus Castillo</div>
-                    <div class="member-role" data-i18n="team.role">Software Engineer</div>
-                </div>
-                <div class="team-member">
-                    <img src="./assets/img/team/Yaku.jpg" alt="Yaku" class="member-photo-actual">
-                    <div class="member-name" data-i18n="team.gabriela">Yaku Guzman</div>
-                    <div class="member-role" data-i18n="team.role">Software Engineer</div>
-                </div>
-                <div class="team-member">
-                    <img src="./assets/img/team/Christofer.jpg" alt="Christopher" class="member-photo-actual">
-                    <div class="member-name" data-i18n="team.jahaziel">Christopher Costa</div>
-                    <div class="member-role" data-i18n="team.role">Software Engineer</div>
-                </div>
-                <div class="team-member">
-                    <img src="./assets/img/team/Ingrid.jpg" alt="Ingrid" class="member-photo-actual">
-                    <div class="member-name" data-i18n="team.williams">Ingrid Medina</div>
-                    <div class="member-role" data-i18n="team.role">Software Engineer</div>
-                </div>
-                <div class="team-member">
-                    <img src="./assets/img/team/Santiago.jpg" alt="Santiago" class="member-photo-actual">
-                    <div class="member-name" data-i18n="team.yaku">Santiago Gordillo</div>
-                    <div class="member-role" data-i18n="team.role">Software Engineer</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section id="about" class="page-section about">
+              <div class="about-content">
+                    <h2 data-i18n="aboutUS.title">About us</h2>
+                    <div class="about-grid">
+                          <div class="about-item">
+                                <div class="about-icon"></div>
+                                <h3 data-i18n="aboutUS.cards.help.title">How We Help</h3>
+                                <p data-i18n="aboutUS.cards.help.text">We empower transport companies and drivers with a
+              smart, easy-to-use platform that simplifies logistics, ensures real-time visibility, and improves
+              communication with clients. Our app reduces inefficiencies, saves time, and builds trust through
+              transparent operation</p>
+                            </div>
+                          <div class="about-item">
+                                <div class="about-icon"></div>
+                                <h3 data-i18n="aboutUS.cards.mission.title">Mission & Vision</h3>
+                                <p data-i18n="aboutUS.cards.mission.text">Our mission is to simplify and optimize
+              transportation by providing drivers and companies with efficient, transparent, and reliable digital tools.
+              With the vision of becoming the leading transportation ecosystem in Latin America, we aim to connect
+              people, businesses, and products through innovative, technology-driven solutions.</p>
+                            </div>
+                          <div class="about-item">
+                                <div class="about-icon"></div>
+                                <h3 data-i18n="aboutUS.cards.value.title">Value Proposition</h3>
+                                <p data-i18n="aboutUS.cards.value.text">Our value lies in delivering smarter logistics,
+              real-time visibility, and cost savings, while strengthening trust and efficiency across the entire supply
+              chain. We help transporters and companies streamline their operations, reduce complexity, and ensure
+              seamless communication with clients.</p>
+                            </div>
+                      </div>
+                </div>
+          </section>
 
-  <!-- PLANS -->
-        <section id="plans" class="page-section pricing">
-        <div class="pricing-content">
-            <h2 data-i18n="pLans.title">Choose Your Plan</h2>
-            <p class="pricing-subtitle" data-i18n="pLans.description">Rutana has the right plan for you</p>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="plan-name" data-i18n="pLans.cards.free.title">Free</div>
-                    <div class="plan-price" data-i18n="pLans.cards.free.text">$0<span> / month</span></div>
-                    <ul class="plan-features" data-i18n="pLans.cards.free.features">
-                        <li>Limit 10 users</li>
-                        <li>Basic route management</li>
-                        <li>Real-time tracking</li>
-                        <li>Email support</li>
-                    </ul>
-                    <button class="plan-btn" data-i18n="pLans.cards.free.btnstarted">Get Started</button>
-                </div>
-                <div class="pricing-card featured">
-                    <div class="plan-name" data-i18n="pLans.cards.professional.title">Professional Plan</div>
-                    <div class="plan-price" data-i18n="pLans.cards.professional.text">$50<span> / month</span></div>
-                    <ul class="plan-features" data-i18n="pLans.cards.professional.features">
-                        <li>50 users available</li>
-                        <li>All features from Free Plan</li>
-                        <li>Detailed reports</li>
-                        <li>Priority customer supports</li>
-                    </ul>
-                    <button class="plan-btn" data-i18n="pLans.cards.professional.btnstarted">Get Started</button>
-                </div>
-                <div class="pricing-card">
-                    <div class="plan-name" data-i18n="pLans.cards.enterprise.title">Enterprise Plan</div>
-                    <div class="plan-price" data-i18n="pLans.cards.enterprise.text">Contact us</div>
-                    <ul class="plan-features" data-i18n="pLans.cards.enterprise.features">
-                        <li>Users according to your needs</li>
-                        <li>All features</li>
-                        <li>Dedicated account manager</li>
-                        <li>Premium support</li>
-                    </ul>
-                    <button class="plan-btn" data-i18n="pLans.cards.enterprise.btnstarted">Get Started</button>
-                </div>
-            </div>
-        </div>
-    </section>
-  <!-- TESTIMONIALS -->
-        <section id="testimonials" class="page-section testimonials">
-        <div class="testimonials-content">
-            <h2 data-i18n="testimonials.title">Testimonials</h2>
-            <p class="testimonials-subtitle" data-i18n="testimonials.description">Hear what our users say about how Restock has transformed their business, helping them manage inventory smarter and reach their goals with greater peace of mind and confidence.</p>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="quote-icon">❝</div>
-                    <p class="testimonial-text" data-i18n="testimonials.cards.1.comment">As a driver, I can focus on the road instead of worrying about planning. Everything is mapped out for me.</p>
-                    <div class="testimonial-author">
-                        <img src="./assets/img/testimonial/David.png" alt="Foto del cliente" class="author-photo-actual">
-                        <div class="author-info">
-                            <h4 data-i18n="testimonials.cards.1.name">David R., Driver</h4>
-                            <p data-i18n="testimonials.cards.1.role">Professional Driver</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon">❝</div>
-                    <p class="testimonial-text" data-i18n="testimonials.cards.2.comment">Simple, smart, and efficient. Exactly what our transport business needed.</p>
-                    <div class="testimonial-author">
-                        <img src="./assets/img/testimonial/Emily.png" alt="Foto del cliente" class="author-photo-actual">
-                        <div class="author-info">
-                            <h4 data-i18n="testimonials.cards.2.name">Emily P., Manager</h4>
-                            <p data-i18n="testimonials.cards.2.role">Operations Manager</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- TEAM -->
+               <section id="team" class="page-section team">
+              <div class="team-content">
+                    <h2 data-i18n="team.title">Our Team</h2>
+                    <p class="team-subtitle" data-i18n="team.description">Learn more about our partners</p>
+                    <div class="team-grid">
+                          <div class="team-member">
+                                <img src="./assets/img/team/Jesus.jpg" alt="Jesus" class="member-photo-actual">
+                                <div class="member-name" data-i18n="team.julio">Jesus Castillo</div>
+                                <div class="member-role" data-i18n="team.role">Software Engineer</div>
+                            </div>
+                          <div class="team-member">
+                                <img src="./assets/img/team/Yaku.jpg" alt="Yaku" class="member-photo-actual">
+                                <div class="member-name" data-i18n="team.gabriela">Yaku Guzman</div>
+                                <div class="member-role" data-i18n="team.role">Software Engineer</div>
+                            </div>
+                          <div class="team-member">
+                                <img src="./assets/img/team/Christofer.jpg" alt="Christopher"
+              class="member-photo-actual">
+                                <div class="member-name" data-i18n="team.jahaziel">Christopher Costa</div>
+                                <div class="member-role" data-i18n="team.role">Software Engineer</div>
+                            </div>
+                          <div class="team-member">
+                                <img src="./assets/img/team/Ingrid.jpg" alt="Ingrid" class="member-photo-actual">
+                                <div class="member-name" data-i18n="team.williams">Ingrid Medina</div>
+                                <div class="member-role" data-i18n="team.role">Software Engineer</div>
+                            </div>
+                          <div class="team-member">
+                                <img src="./assets/img/team/Santiago.jpg" alt="Santiago" class="member-photo-actual">
+                                <div class="member-name" data-i18n="team.yaku">Santiago Gordillo</div>
+                                <div class="member-role" data-i18n="team.role">Software Engineer</div>
+                            </div>
+                      </div>
+                </div>
+          </section>
+
+    <!-- PLANS -->
+            <section id="plans" class="page-section pricing">
+              <div class="pricing-content">
+                    <h2 data-i18n="pLans.title">Choose Your Plan</h2>
+                    <p class="pricing-subtitle" data-i18n="pLans.description">Rutana has the right plan for you</p>
+                    <div class="pricing-grid">
+                          <div class="pricing-card">
+                                <div class="plan-name" data-i18n="pLans.cards.free.title">Free</div>
+                                <div class="plan-price" data-i18n="pLans.cards.free.text">$0<span> / month</span></div>
+                                <ul class="plan-features" data-i18n="pLans.cards.free.features">
+                                      <li>Limit 10 users</li>
+                                      <li>Basic route management</li>
+                                      <li>Real-time tracking</li>
+                                      <li>Email support</li>
+                                  </ul>
+                                <button class="plan-btn" data-i18n="pLans.cards.free.btnstarted"
+              onclick="window.open('https://rutana-app-frontend.web.app/management/routes/list', '_blank')">
+              Get Started
+            </button>
+                            </div>
+                          <div class="pricing-card featured">
+                                <div class="plan-name" data-i18n="pLans.cards.professional.title">Professional Plan
+            </div>
+                                <div class="plan-price" data-i18n="pLans.cards.professional.text">$50<span> /
+                month</span></div>
+                                <ul class="plan-features" data-i18n="pLans.cards.professional.features">
+                                      <li>50 users available</li>
+                                      <li>All features from Free Plan</li>
+                                      <li>Detailed reports</li>
+                                      <li>Priority customer supports</li>
+                                  </ul>
+                                <button class="plan-btn" data-i18n="pLans.cards.professional.btnstarted"
+              onclick="window.open('https://rutana-app-frontend.web.app/management/routes/list', '_blank')">
+              Get Started
+            </button>
+                            </div>
+                          <div class="pricing-card">
+                                <div class="plan-name" data-i18n="pLans.cards.enterprise.title">Enterprise Plan</div>
+                                <div class="plan-price" data-i18n="pLans.cards.enterprise.text">Contact us</div>
+                                <ul class="plan-features" data-i18n="pLans.cards.enterprise.features">
+                                      <li>Users according to your needs</li>
+                                      <li>All features</li>
+                                      <li>Dedicated account manager</li>
+                                      <li>Premium support</li>
+                                  </ul>
+                                <button class="plan-btn" data-i18n="pLans.cards.enterprise.btnstarted"
+              onclick="window.open('https://rutana-app-frontend.web.app/management/routes/list', '_blank')">
+              Get Started
+            </button>
+                            </div>
+                      </div>
+                </div>
+          </section>
+    <!-- TESTIMONIALS -->
+            <section id="testimonials" class="page-section testimonials">
+              <div class="testimonials-content">
+                    <h2 data-i18n="testimonials.title">Testimonials</h2>
+                    <p class="testimonials-subtitle" data-i18n="testimonials.description">Hear what our users say about
+          how Restock has transformed their business, helping them manage inventory smarter and reach their goals with
+          greater peace of mind and confidence.</p>
+                    <div class="testimonials-grid">
+                          <div class="testimonial-card">
+                                <div class="quote-icon">❝</div>
+                                <p class="testimonial-text" data-i18n="testimonials.cards.1.comment">As a driver, I can
+              focus on the road instead of worrying about planning. Everything is mapped out for me.</p>
+                                <div class="testimonial-author">
+                                      <img src="./assets/img/testimonial/David.png" alt="Foto del cliente"
+                class="author-photo-actual">
+                                      <div class="author-info">
+                                            <h4 data-i18n="testimonials.cards.1.name">David R., Driver</h4>
+                                            <p data-i18n="testimonials.cards.1.role">Professional Driver</p>
+                                        </div>
+                                  </div>
+                            </div>
+                          <div class="testimonial-card">
+                                <div class="quote-icon">❝</div>
+                                <p class="testimonial-text" data-i18n="testimonials.cards.2.comment">Simple, smart, and
+              efficient. Exactly what our transport business needed.</p>
+                                <div class="testimonial-author">
+                                      <img src="./assets/img/testimonial/Emily.png" alt="Foto del cliente"
+                class="author-photo-actual">
+                                      <div class="author-info">
+                                            <h4 data-i18n="testimonials.cards.2.name">Emily P., Manager</h4>
+                                            <p data-i18n="testimonials.cards.2.role">Operations Manager</p>
+                                        </div>
+                                  </div>
+                            </div>
+                      </div>
+                </div>
+          </section>
 
 
     <!-- FAQ SECTION -->
     <section id="faq" class="page-section faq">
-          <div class="faq-content">
-         <div class="faq-header">
-           <div class="faq-icon">
-             <img src="./assets/img/logo/logo azul.png" alt="Logo de Rutana">
-               </div>
-            <h2 data-i18n="faq.title">Frequently ask Questions</h2>
-           </div>
-         <div class="faq-list">
-           <div class="faq-item">
-               <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.1.question">
-                 What is Rutana?
-                 <span class="faq-arrow">▼</span>
-               </div>
-               <div class="faq-answer">
-                 <p data-i18n="faq.items.1.answer">Rutana is a digital platform designed to help transportation companies and drivers manage routes, vehicles, and teams more efficiently. It simplifies daily operations by providing clear assignments, real-time updates, and a user-friendly interface.</p>
-               </div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.2.question">
-                 Who can benefit from using Rutana?
-                 <span class="faq-arrow">▼</span>
-               </div>
-               <div class="faq-answer">
-                 <p data-i18n="faq.items.2.answer">Rutana is built for logistics companies, fleet managers, and transport operators who need to organize routes, assign vehicles and drivers, and keep track of operations with better visibility and control.</p>
-               </div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.3.question">
-                 Do I need technical knowledge to use Rutana?
-                 <span class="faq-arrow">▼</span>
-               </div>
-               <div class="faq-answer">
-                 <p data-i18n="faq.items.3.answer">Not at all. Rutana is designed with simplicity in mind. The platform provides an intuitive dashboard where admins can set up teams and vehicles, while drivers can easily access their daily assignments.</p>
-               </div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.4.question">
-                 Can I use Rutana on mobile devices?
-                 <span class="faq-arrow">▼</span>
-               </div>
-               <div class="faq-answer">
-                 <p data-i18n="faq.items.4.answer">Yes. Rutana's landing page and web app are fully responsive, so you can access the platform on desktops, tablets, and smartphones without losing functionality.</p>
-               </div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.5.question">
-                 How does Rutana help my business grow?
-                 <span class="faq-arrow">▼</span>
-               </div>
-               <div class="faq-answer">
-                 <p data-i18n="faq.items.5.answer">By streamlining route planning, improving communication between admins and drivers, and keeping reliable historical records, Rutana reduces operational errors, saves time, and ensures that your logistics processes scale with your business needs.</p>
-               </div>
-           </div>
-         </div>
-     </div>
+      <div class="faq-content">
+        <div class="faq-header">
+          <div class="faq-icon">
+            <img src="./assets/img/logo/logo azul.png" alt="Logo de Rutana">
+          </div>
+          <h2 data-i18n="faq.title">Frequently ask Questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.1.question">
+              What is Rutana?
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p data-i18n="faq.items.1.answer">Rutana is a digital platform designed to help transportation companies
+                and drivers manage routes, vehicles, and teams more efficiently. It simplifies daily operations by
+                providing clear assignments, real-time updates, and a user-friendly interface.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.2.question">
+              Who can benefit from using Rutana?
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p data-i18n="faq.items.2.answer">Rutana is built for logistics companies, fleet managers, and transport
+                operators who need to organize routes, assign vehicles and drivers, and keep track of operations with
+                better visibility and control.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.3.question">
+              Do I need technical knowledge to use Rutana?
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p data-i18n="faq.items.3.answer">Not at all. Rutana is designed with simplicity in mind. The platform
+                provides an intuitive dashboard where admins can set up teams and vehicles, while drivers can easily
+                access their daily assignments.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.4.question">
+              Can I use Rutana on mobile devices?
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p data-i18n="faq.items.4.answer">Yes. Rutana's landing page and web app are fully responsive, so you can
+                access the platform on desktops, tablets, and smartphones without losing functionality.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.items.5.question">
+              How does Rutana help my business grow?
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p data-i18n="faq.items.5.answer">By streamlining route planning, improving communication between admins
+                and drivers, and keeping reliable historical records, Rutana reduces operational errors, saves time, and
+                ensures that your logistics processes scale with your business needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-main">
-                <div class="footer-logo">
-                    <img src="assets/img/logo/logo azul.png" alt="Rutana Logo">
-                </div>
-                <div class="footer-brand">
-                    <h3 data-i18n="hero.title">Welcome to Rutana</h3>
-                    <p data-i18n="footer.topLeftText">We make a better workspace around the world</p>
-                </div>
-            </div>
-            <div class="footer-right-sections">
-                <div class="footer-section">
-                    <h4 data-i18n="footer.sectionsTitle">Pages</h4>
-                    <ul>
-                        <li><a href="#home" data-i18n="footer.sections.home">Home</a></li>
-                        <li><a href="#features" data-i18n="footer.sections.feature">Feature</a></li>
-                        <li><a href="#about" data-i18n="footer.sections.about">About Us</a></li>
-                        <li><a href="#plans" data-i18n="footer.sections.plans">Plans</a></li>
-                        <li><a href="#testimonials" data-i18n="footer.sections.testimonials">Testimonials</a></li>
-                        <li><a href="#faq" data-i18n="footer.sections.faq">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 data-i18n="footer.socialTitle">Social Networking</h4>
-                    <div class="social-links">
-                        <a href="#" data-i18n="footer.social.facebook">@Rutana</a>
-                        <a href="#" data-i18n="footer.social.twitter">@Rutana</a>
-                        <a href="#" data-i18n="footer.social.instagram">@Rutana</a>
-                        <a href="#" data-i18n="footer.social.linkedin">@Rutana</a>
-                    </div>
-                </div>
-            </div>
-                </div>
-        <div class="footer-bottom">
-            <p>
-                <span data-i18n="footer.bottom.terms">Terms of Services</span>
-                &nbsp;&nbsp;&nbsp; 
-                <span data-i18n="footer.bottom.privacyPolicy">Privacy Policy</span>
-                &nbsp;&nbsp;&nbsp; 
-                <span data-i18n="footer.bottom.rights">©2025 Qoritech LLC.</span>
-            </p>
+      <div class="footer-content">
+        <div class="footer-main">
+          <div class="footer-logo">
+            <img src="assets/img/logo/logo azul.png" alt="Rutana Logo">
+          </div>
+          <div class="footer-brand">
+            <h3 data-i18n="hero.title">Welcome to Rutana</h3>
+            <p data-i18n="footer.topLeftText">We make a better workspace around the world</p>
+          </div>
         </div>
-          </footer>
+        <div class="footer-right-sections">
+          <div class="footer-section">
+            <h4 data-i18n="footer.sectionsTitle">Pages</h4>
+            <ul>
+              <li><a href="#home" data-i18n="footer.sections.home">Home</a></li>
+              <li><a href="#features" data-i18n="footer.sections.feature">Feature</a></li>
+              <li><a href="#about" data-i18n="footer.sections.about">About Us</a></li>
+              <li><a href="#plans" data-i18n="footer.sections.plans">Plans</a></li>
+              <li><a href="#testimonials" data-i18n="footer.sections.testimonials">Testimonials</a></li>
+              <li><a href="#faq" data-i18n="footer.sections.faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 data-i18n="footer.socialTitle">Social Networking</h4>
+            <div class="social-links">
+              <a href="#" data-i18n="footer.social.facebook">@Rutana</a>
+              <a href="#" data-i18n="footer.social.twitter">@Rutana</a>
+              <a href="#" data-i18n="footer.social.instagram">@Rutana</a>
+              <a href="#" data-i18n="footer.social.linkedin">@Rutana</a>
+            </div>
+          </div>
+        </div>
+               
+      </div>
+      <div class="footer-bottom">
+        <p>
+          <span data-i18n="footer.bottom.terms">Terms of Services</span>
+          &nbsp;&nbsp;&nbsp;
+          <span data-i18n="footer.bottom.privacyPolicy">Privacy Policy</span>
+          &nbsp;&nbsp;&nbsp;
+          <span data-i18n="footer.bottom.rights">©2025 Qoritech LLC.</span>
+        </p>
+      </div>
+         
+    </footer>
   </main>
 
-  <script src="/assets/scripts/script.js" defer></script>
-  <script src="/assets/scripts/translations.js" defer></script>
+  <script src="assets/scripts/translations.js"></script>
+  <script src="assets/scripts/script.js"></script>
 
   <script>
     function toggleFaq(element) {
       console.log('FAQ clicked'); // Debug log
-      
+
       const faqItem = element.parentElement;
       const isActive = faqItem.classList.contains('active');
-      
+
       console.log('Is active:', isActive); // Debug log
-      
+
       // Close all FAQ items first
       document.querySelectorAll('.faq-item').forEach(item => {
         item.classList.remove('active');
@@ -374,7 +419,7 @@
           arrow.textContent = '▼';
         }
       });
-      
+
       // If this item wasn't active, open it
       if (!isActive) {
         console.log('Opening FAQ item'); // Debug log
@@ -389,7 +434,7 @@
     }
 
     // Ensure the function is available when the page loads
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       console.log('FAQ script loaded');
     });
   </script>
