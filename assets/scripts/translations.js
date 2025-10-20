@@ -331,17 +331,16 @@ const translation = {
     }
   }
 };
-
 // --- util: obtener traducción usando claves anidadas como "feature.cards.free.title"
 function getNestedTranslation(obj, key) {
   if (!obj || !key) return undefined;
   return key.split('.').reduce((acc, k) => (acc !== undefined ? acc[k] : undefined), obj);
 }
 
-
 // --- convierte arrays y objetos en contenido legible en el DOM
 function applyTranslationToElement(el, value) {
   if (value === undefined || value === null) return;
+
   // arrays -> si es UL/OL, renderizamos <li>, si no, los unimos por coma
   if (Array.isArray(value)) {
     if (el.tagName === 'UL' || el.tagName === 'OL') {
@@ -364,13 +363,15 @@ function applyTranslationToElement(el, value) {
   el.textContent = value;
 }
 
-
-// --- función principal de traducción
-let currentLang = 'en';
+// --- Lógica principal de traducción
+let currentLang = localStorage.getItem('lang') || 'en';
 
 function translatePage(lang) {
   const root = translation[lang];
-  if (!root) { console.warn('Language not found:', lang); return; }
+  if (!root) {
+    console.warn('Language not found:', lang);
+    return;
+  }
 
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n'); // e.g. "plans.cards.free.features"
@@ -389,17 +390,27 @@ function translatePage(lang) {
   console.log('Language switched to', lang);
 }
 
+// --- función auxiliar para el estado visual del botón
+function updateButtonState(lang) {
+  document.querySelectorAll('#language-switcher .lang-btn').forEach(btn => {
+    const isActive = btn.dataset.lang === lang;
+    btn.classList.toggle('active', isActive);
+  });
+}
 
-// --- evento del botón
-document.addEventListener('DOMContentLoaded', () => {
-  const langBtn = document.getElementById('langBtn');
-  if (langBtn) {
-    langBtn.addEventListener('click', () => {
-      currentLang = currentLang === 'en' ? 'es' : 'en';
+// --- evento de cambio de idioma
+document.querySelectorAll('#language-switcher .lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const selectedLang = btn.dataset.lang;
+    if (selectedLang && selectedLang !== currentLang) {
+      currentLang = selectedLang;
+      localStorage.setItem('lang', currentLang);
       translatePage(currentLang);
-    });
-  }
-
-  // traducir al cargar
-  translatePage(currentLang);
+      updateButtonState(currentLang);
+    }
+  });
 });
+
+// --- Inicialización al cargar
+translatePage(currentLang);
+updateButtonState(currentLang);

@@ -19,6 +19,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <!-- Styles -->
   <link rel="stylesheet" href="assets/styles/faq.css" />
   <link rel="stylesheet" href="assets/styles/footer.css" />
@@ -30,7 +32,7 @@
   <link rel="stylesheet" href="assets/styles/services.css" />
   <link rel="stylesheet" href="assets/styles/hero.css" />
   <link rel="stylesheet" href="assets/styles/header.css" />
-
+  <link rel="stylesheet" href="assets/styles/buttonT.css">
 </head>
 
 <body>
@@ -46,22 +48,19 @@
       <div class="navbar__menu">
         <ul class="navbar__links">
           <li><a href="#home" data-i18n="navbar.home">Home</a></li>
-          <li><a href="#feature" data-i18n="navbar.feature">Feature</a></li>
+          <li><a href="#features" data-i18n="navbar.feature">Feature</a></li>
           <li><a href="#about" data-i18n="navbar.about">About Us</a></li>
           <li><a href="#plans" data-i18n="navbar.plans">Plans</a></li>
           <li><a href="#testimonials" data-i18n="navbar.testimonials">Testimonials</a></li>
           <li><a href="#faq" data-i18n="navbar.faq">FAQ</a></li>
-          <li><a href="#getstarted" data-i18n="navbar.getstarted">Get Started</a></li>
         </ul>
       </div>
       <div class="navbar_actions">
         <a href="https://rutana-app-frontend.web.app/management/routes/list" class="btn-get-started" target="_blank"
           data-i18n="navbar.getstarted">Get Started</a>
-        <button class="lang-btn" id="langBtn" aria-label="Cambiar idioma">
-          <span class="material-icons">language</span>
-        </button>
       </div>
     </nav>
+    </div>
 
     <!-- HERO -->
   </header>
@@ -395,13 +394,19 @@
           <span data-i18n="footer.bottom.rights">©2025 Qoritech LLC.</span>
         </p>
       </div>
-         
     </footer>
+
+<div class="language-switcher-container">
+    <div id="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+</div>
+
   </main>
 
   <script src="assets/scripts/translations.js"></script>
   <script src="assets/scripts/script.js"></script>
-
   <script>
     function toggleFaq(element) {
       console.log('FAQ clicked'); // Debug log
@@ -438,6 +443,7 @@
       console.log('FAQ script loaded');
     });
   </script>
+
 
 </body>
 

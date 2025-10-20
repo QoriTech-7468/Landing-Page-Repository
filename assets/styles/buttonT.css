@@ -1,0 +1,35 @@
+/* Language Switcher */
+.language-switcher-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+#language-switcher {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3rem;
+  padding: 0.25rem;
+  display: flex;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.1);
+  width: fit-content;
+}
+
+#language-switcher .lang-btn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  border-radius: 3rem;
+  transition: all 0.3s ease;
+}
+
+#language-switcher .lang-btn.active {
+  background: #fbbf24;       /* Amarillo */
+  color: #043873;            /* Azul */
+  box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.15);
+}
