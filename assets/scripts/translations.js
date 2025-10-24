@@ -162,6 +162,82 @@ const translation = {
         terms: 'Terms of Services',
         rights: '©2025 Qoritech LLC.'
       }
+    },
+    terms: {
+  title: 'Terms of Service – Rutana',
+  lastUpdated: 'Last updated: October 2025',
+  welcome: 'Welcome to Rutana',
+  description: 'A platform developed by QoriTech to help manage fleets, routes, and delivery incidents efficiently. By accessing or using our service, you agree to comply with these Terms of Service. If you do not agree, please do not use the platform.',
+  sections: {
+    serviceUse: {
+      title: 'Service Use',
+      text: 'Rutana provides digital tools for managing vehicles, assigning routes, and recording deliveries or incidents. Users agree to use the service solely for lawful business operations.'
+    },
+    accountsSecurity: {
+      title: 'Accounts and Security',
+      text: 'To access key features, an account is required. Users are responsible for maintaining the confidentiality of their credentials and any activity performed under their account. QoriTech will not be liable for misuse or loss of access due to shared credentials.'
+    },
+    licenseUse: {
+      title: 'License of Use',
+      text: 'QoriTech grants a limited, non-exclusive, and revocable license to access and use Rutana. Users may not modify, distribute, copy, or reverse-engineer the software without prior authorization.'
+    },
+    intellectualProperty: {
+      title: 'Intellectual Property',
+      text: 'All content, design, source code, and materials related to Rutana are owned by QoriTech. Reproduction or redistribution without permission is strictly prohibited.'
+    },
+    availabilityMaintenance: {
+      title: 'Availability and Maintenance',
+      text: 'QoriTech reserves the right to temporarily suspend services for maintenance or updates. Users will be notified in advance whenever possible.'
+    },
+    limitationLiability: {
+      title: 'Limitation of Liability',
+      text: 'Rutana is provided “as is” without guarantees of uninterrupted availability. QoriTech shall not be held liable for data loss, service interruptions, or indirect damages arising from platform use.'
+    },
+    modifications: {
+      title: 'Modifications',
+      text: 'We may update these terms at any time. Changes become effective once published on our official site.'
+    },
+    contact: {
+      title: 'Contact',
+      text: 'For any questions regarding these terms, contact us at: contact@qoritech.com'
+    }
+  }
+    },
+    privacy: {
+  title: 'Privacy Policy – Rutana',
+  lastUpdated: 'Last updated: October 2025',
+  welcome: 'Your Privacy Matters to Us.',
+  description: 'At QoriTech, we respect your privacy and protect your personal data. This policy describes how we collect, use, and safeguard the information of Rutana users.',
+  sections: {
+    informationCollected: {
+      title: 'Information Collected',
+      text: 'We collect data necessary for the system’s operation, including: Account information (name, email, encrypted password). Fleet and route data (vehicles, locations, delivery statuses). Technical information (IP address, device, and browser).'
+    },
+    informationUse: {
+      title: 'Use of Information',
+      text: 'The information is used for: Operating, maintaining, and improving the service. Personalizing the user experience. Analyzing metrics and generating performance reports. Administrative communications and technical support.'
+    },
+    informationProtection: {
+      title: 'Protection of Information',
+      text: 'We apply technical and organizational security measures to prevent unauthorized access, loss, or misuse of data.'
+    },
+    dataSharing: {
+      title: 'Data Sharing',
+      text: 'We do not sell or share personal information with third parties, except when necessary for the service’s operation (e.g., cloud providers or notifications).'
+    },
+    userRights: {
+      title: 'User Rights',
+      text: 'Users may request access, correction, or deletion of their personal data by contacting us at privacy@qoritech.com.'
+    },
+    dataRetention: {
+      title: 'Data Retention',
+      text: 'Data will be retained only for as long as necessary for the purposes described or while the account remains active.'
+    },
+    policyChanges: {
+      title: 'Changes to the Policy',
+      text: 'We may update this policy periodically. Modifications will be published with the corresponding revision date.'
+    }
+  }
     }
   },
 
@@ -328,6 +404,82 @@ const translation = {
         terms: 'Términos de Servicio',
         rights: '©2025 Qoritech LLC.'
       }
+    },
+    terms: {
+  title: 'Términos de Servicio – Rutana',
+  lastUpdated: 'Última actualización: Octubre 2025',
+  welcome: 'Bienvenido a Rutana',
+  description: 'Una plataforma desarrollada por QoriTech para ayudar a gestionar flotas, rutas e incidentes de entrega de manera eficiente. Al acceder o usar nuestro servicio, aceptas cumplir con estos Términos de Servicio. Si no estás de acuerdo, por favor no utilices la plataforma.',
+  sections: {
+    serviceUse: {
+      title: 'Uso del Servicio',
+      text: 'Rutana proporciona herramientas digitales para gestionar vehículos, asignar rutas y registrar entregas o incidentes. Los usuarios acuerdan usar el servicio únicamente para operaciones comerciales legales.'
+    },
+    accountsSecurity: {
+      title: 'Cuentas y Seguridad',
+      text: 'Para acceder a funciones clave, se requiere una cuenta. Los usuarios son responsables de mantener la confidencialidad de sus credenciales y de cualquier actividad realizada bajo su cuenta. QoriTech no será responsable por el mal uso o la pérdida de acceso debido a credenciales compartidas.'
+    },
+    licenseUse: {
+      title: 'Licencia de Uso',
+      text: 'QoriTech otorga una licencia limitada, no exclusiva y revocable para acceder y usar Rutana. Los usuarios no pueden modificar, distribuir, copiar ni realizar ingeniería inversa del software sin autorización previa.'
+    },
+    intellectualProperty: {
+      title: 'Propiedad Intelectual',
+      text: 'Todo el contenido, diseño, código fuente y materiales relacionados con Rutana son propiedad de QoriTech. La reproducción o redistribución sin permiso está estrictamente prohibida.'
+    },
+    availabilityMaintenance: {
+      title: 'Disponibilidad y Mantenimiento',
+      text: 'QoriTech se reserva el derecho de suspender temporalmente los servicios para mantenimiento o actualizaciones. Los usuarios serán notificados con anticipación siempre que sea posible.'
+    },
+    limitationLiability: {
+      title: 'Limitación de Responsabilidad',
+      text: 'Rutana se proporciona "tal cual" sin garantías de disponibilidad ininterrumpida. QoriTech no será responsable por pérdida de datos, interrupciones del servicio o daños indirectos derivados del uso de la plataforma.'
+    },
+    modifications: {
+      title: 'Modificaciones',
+      text: 'Podemos actualizar estos términos en cualquier momento. Los cambios entrarán en vigor una vez publicados en nuestro sitio oficial.'
+    },
+    contact: {
+      title: 'Contacto',
+      text: 'Para cualquier pregunta sobre estos términos, contáctenos en: contact@qoritech.com'
+    }
+    }
+    },
+    privacy: {
+  title: 'Política de Privacidad – Rutana',
+  lastUpdated: 'Última actualización: Octubre 2025',
+  welcome: 'Tu privacidad nos importa.',
+  description: 'En QoriTech, respetamos su privacidad y protegemos sus datos personales. Esta política describe cómo recopilamos, usamos y protegemos la información de los usuarios de Rutana.',
+  sections: {
+    informationCollected: {
+      title: 'Información recopilada',
+      text: 'Recopilamos datos necesarios para el funcionamiento del sistema, incluyendo: Información de cuenta (nombre, correo, contraseña cifrada). Datos de flota y rutas (vehículos, ubicaciones, estados de entrega). Información técnica (dirección IP, dispositivo y navegador).'
+    },
+    informationUse: {
+      title: 'Uso de la información',
+      text: 'La información se utiliza para: Operar, mantener y mejorar el servicio. Personalizar la experiencia del usuario. Analizar métricas y generar reportes de desempeño. Comunicaciones administrativas y soporte técnico.'
+    },
+    informationProtection: {
+      title: 'Protección de la información',
+      text: 'Aplicamos medidas de seguridad técnicas y organizativas para prevenir accesos no autorizados, pérdida o uso indebido de los datos.'
+    },
+    dataSharing: {
+      title: 'Compartición de datos',
+      text: 'No vendemos ni compartimos información personal con terceros, excepto cuando sea necesario para el funcionamiento del servicio (por ejemplo, proveedores de nube o notificaciones).'
+    },
+    userRights: {
+      title: 'Derechos del usuario',
+      text: 'Los usuarios pueden solicitar acceso, corrección o eliminación de sus datos personales contactándonos en privacy@qoritech.com.'
+    },
+    dataRetention: {
+      title: 'Retención de datos',
+      text: 'Los datos se conservarán solo durante el tiempo necesario para los fines descritos o mientras la cuenta esté activa.'
+    },
+    policyChanges: {
+      title: 'Cambios en la política',
+      text: 'Podemos actualizar esta política periódicamente. Las modificaciones serán publicadas con la fecha de revisión correspondiente.'
+    }
+  }
     }
   }
 };
