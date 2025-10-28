@@ -175,67 +175,12 @@ document.querySelectorAll('.service-card, .pricing-card, .team-member').forEach(
 });
 
 // Mobile menu toggle
-function toggleMobileMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('mobile-active');
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.querySelector('.navbar__menu');
 
-    // Add mobile styles if needed
-    if (window.innerWidth <= 768) {
-        const nav = document.querySelector('.nav');
-        const mobileMenuBtn = document.createElement('button');
-        mobileMenuBtn.innerHTML = '☰';
-        mobileMenuBtn.style.cssText = `
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            display: block;
-            @media (min-width: 769px) { display: none; }
-        `;
-        mobileMenuBtn.onclick = toggleMobileMenu;
-        nav.appendChild(mobileMenuBtn);
-    }
-
-    // Performance optimization
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
-
-    // Initialize page
-    document.addEventListener('DOMContentLoaded', () => {
-        showPage('home');
-        
-        // Add loading animation
-        document.querySelectorAll('.service-card, .about-item, .team-member').forEach((el, index) => {
-            el.style.animationDelay = `${index * 0.1}s`;
-        });
-    });
-
-    // Click tracking for analytics
-    function trackClick(elementName, action) {
-        console.log(`Tracking: ${elementName} - ${action}`);
-    }
-
-    // Add event listeners for tracking
-    document.querySelectorAll('.btn-primary, .plan-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            trackClick('CTA Button', e.target.textContent);
-        });
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            trackClick('Navigation', e.target.textContent);
-        });
-    });
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+});
 

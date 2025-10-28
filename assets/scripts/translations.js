@@ -65,7 +65,7 @@ const translation = {
       description: "Rutana has the right plan for you.",
       cards: {
         free: {
-          title: "Free",
+          title: "Our budget-friendly service",
           text: "$0/month",
           features: [
             "Limit 10 users",
@@ -139,9 +139,18 @@ const translation = {
         }
       }
     },
+    enganche: {
+    title: "Change begins with a smarter route.",
+    subtitle: "Write to us and discover how Rutana can optimize your routes, your time, and your results.",
+    contact: {
+      email: "contact@qoritech.com",
+      whatsapp: "WhatsApp",
+      linkedin: "LinkedIn"
+    }
+    },
     footer: {
       topLeftText: 'We make a better workspace around the world',
-      sectionsTitle: 'Pages',
+      sectionsTitle: 'Useful Links',
       sections: {
         home: 'Home',
         feature: 'Feature',
@@ -381,9 +390,18 @@ const translation = {
         }
       }
     },
+    enganche: {
+    title: "El cambio empieza con una ruta más inteligente.",
+    subtitle: "Escríbenos y descubre cómo Rutana puede optimizar tus rutas, tu tiempo y tus resultados.",
+    contact: {
+      email: "contact@qoritech.com",
+      whatsapp: "WhatsApp",
+      linkedin: "LinkedIn"
+    }
+    },
     footer: {
       topLeftText: 'Creamos mejores espacios de trabajo alrededor del mundo',
-      sectionsTitle: 'Páginas',
+      sectionsTitle: 'Enlaces Útiles',
       sections: {
         home: 'Inicio',
         feature: 'Funcionalidades',
@@ -483,13 +501,14 @@ const translation = {
     }
   }
 };
+
 // --- util: obtener traducción usando claves anidadas como "feature.cards.free.title"
 function getNestedTranslation(obj, key) {
   if (!obj || !key) return undefined;
   return key.split('.').reduce((acc, k) => (acc !== undefined ? acc[k] : undefined), obj);
 }
 
-// --- convierte arrays y objetos en contenido legible en el DOM
+// --- aplica traducción al elemento
 function applyTranslationToElement(el, value) {
   if (value === undefined || value === null) return;
 
@@ -512,7 +531,15 @@ function applyTranslationToElement(el, value) {
   }
 
   // strings / numbers
-  el.textContent = value;
+  // Solo para H2, H3 o P dejamos HTML (para <span> o <b>)
+  if (el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P') {
+    el.innerHTML = value;
+  } else {
+    // aquí nos aseguramos de no tocar spans de material-icons
+    if (!el.classList.contains('material-icons')) {
+      el.textContent = value;
+    }
+  }
 }
 
 // --- Lógica principal de traducción
@@ -526,10 +553,11 @@ function translatePage(lang) {
   }
 
   document.querySelectorAll('[data-i18n]').forEach((el) => {
-    const key = el.getAttribute('data-i18n'); // e.g. "plans.cards.free.features"
+    const key = el.getAttribute('data-i18n'); // e.g. "contact.title"
     const value = getNestedTranslation(root, key);
+
     if (value !== undefined) {
-      // si es input con placeholder
+      // si es input o textarea con placeholder
       if ((el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') && el.placeholder !== undefined) {
         el.placeholder = typeof value === 'string' ? value : String(value);
       } else {
@@ -562,6 +590,10 @@ document.querySelectorAll('#language-switcher .lang-btn').forEach(btn => {
     }
   });
 });
+
+onload = () =>{
+    document.body.classList.remove("container");
+};
 
 // --- Inicialización al cargar
 translatePage(currentLang);

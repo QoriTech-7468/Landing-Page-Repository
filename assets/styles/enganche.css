@@ -1,0 +1,119 @@
+.enganche {
+  background-color: #043873;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.enganche-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.enganche-text {
+  flex: 1;
+  max-width: 550px;
+}
+
+.enganche-text h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #fbbf24;
+}
+.enganche-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 25px;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Material icons (email) */
+.icon-btn .material-icons {
+  font-size: 28px;
+  color: #fbbf24;
+}
+
+/* SVG icons */
+.icon-btn img {
+  width: 26px;
+  height: 26px;
+  filter: brightness(0) saturate(100%) invert(73%) sepia(100%) saturate(361%) hue-rotate(358deg) brightness(101%) contrast(92%);
+}
+
+/* Hover effects by platform */
+.icon-btn.whatsapp:hover img {
+  filter: invert(63%) sepia(94%) saturate(410%) hue-rotate(93deg) brightness(95%) contrast(90%);
+}
+
+.icon-btn.email:hover .material-icons {
+  color: #fbbc04;
+}
+
+.icon-btn.linkedin:hover img {
+  filter: invert(29%) sepia(97%) saturate(1893%) hue-rotate(184deg) brightness(93%) contrast(91%);
+}
+
+.enganche-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.enganche-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .enganche-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .enganche-text {
+    max-width: 100%;
+  }
+
+  .enganche-image img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
