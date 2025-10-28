@@ -66,7 +66,7 @@ const translation = {
       cards: {
         free: {
           title: "Our budget-friendly service",
-          text: "$0/month",
+          text: "$10/month",
           features: [
             "Limit 10 users",
             "Basic route management",
@@ -316,8 +316,8 @@ const translation = {
       description: "Rutana tiene el plan adecuado para ti.",
       cards: {
         free: {
-          title: "Gratis",
-          text: "$0/mes",
+          title: "Nuestro servicio económico",
+          text: "$10/mes",
           features: [
             "Límite de 10 usuarios",
             "Gestión básica de rutas",
