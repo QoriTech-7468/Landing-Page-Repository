@@ -13,7 +13,7 @@ const translation = {
       title: 'Welcome to Rutana',
       subtitle: '-Present by Qoritech-',
       description: 'Planing, delegating and report!\nOur platform helps your company with planing the best routes, simplify the rol assignment and get a full report of the whole situation.\nGet on the rode and make your company the fastest there is!',
-      btnStart: 'Try free trial'
+      btnStart: 'Try Now'
     },
     services: {
       title: 'Meet our value',
@@ -97,7 +97,8 @@ const translation = {
           ],
           btnstarted: 'Get started'
         }
-      }
+      },
+    
     },
     testimonials: {
       title: 'Testimonials',
@@ -139,6 +140,11 @@ const translation = {
         }
       }
     },
+            video: {
+              title:"Our Videos",
+          description1: "Meet the people behind Rutana and discover our passion for logistics.",
+          description2: "See how Rutana optimizes routes, tracks fleets and boosts your deliveries."
+        },
     enganche: {
     title: "Change begins with a smarter route.",
     subtitle: "Write to us and discover how Rutana can optimize your routes, your time, and your results.",
@@ -264,7 +270,7 @@ const translation = {
       title: 'Bienvenido a Rutana',
       subtitle: '-Presentado por Qoritech-',
       description: '¡Planificación, delegación e informes!\nNuestra plataforma ayuda a tu empresa a planificar las mejores rutas, simplificar la asignación de roles y obtener un informe completo de toda la situación.\n¡Ponte en marcha y haz que tu empresa sea la más rápida!',
-      btnStart: 'Prueba gratuita'
+      btnStart: 'Probar ahora'
     },
     services: {
       title: 'Conoce nuestro valor',
@@ -390,6 +396,11 @@ const translation = {
         }
       }
     },
+        video: {
+          title: "Nuestros videos",
+          description1: "Conozca al equipo detrás de Rutana y descubra nuestra pasión por la logística.",
+          description2: "Descubre cómo Rutana optimiza las rutas, realiza el seguimiento de las flotas e impulsa tus entregas."
+        },
     enganche: {
     title: "El cambio empieza con una ruta más inteligente.",
     subtitle: "Escríbenos y descubre cómo Rutana puede optimizar tus rutas, tu tiempo y tus resultados.",

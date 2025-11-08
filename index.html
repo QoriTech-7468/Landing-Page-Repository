@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="assets/styles/header.css" />
   <link rel="stylesheet" href="assets/styles/buttonT.css"/>
   <link rel="stylesheet" href="assets/styles/enganche.css"/>
-</head>
+  <link rel="stylesheet" href="assets/styles/videos.css"/>
 
 <body>
   <!-- HEADER & NAVBAR -->
@@ -80,7 +80,7 @@
           </p>
           <button class="btn-start" data-i18n="hero.btnStart"
             onclick="window.open('https://rutana-app-frontend.web.app/management/routes/list', '_blank')">
-            Try free trial
+            Try Now
           </button>
         </div>
         <div class="hero-image">
@@ -282,7 +282,6 @@
                 </div>
           </section>
 
-
     <!-- FAQ SECTION -->
     <section id="faq" class="page-section faq">
       <div class="faq-content">
@@ -353,6 +352,48 @@
         </div>
       </div>
     </section>
+    <!--  VIDEOS SECTION  -->
+<section class="videos-section" aria-labelledby="videosTitle">
+  <div class="container"> <!-- centra todo -->
+    <h2 id="videosTitle" class="videos__title" data-i18n="video.title">Our Videos</h2>
+
+    <div class="videos-grid">
+      <!-- Video 1 -->
+      <div class="video-card">
+        <h3 class="video-card__title">About the Team</h3>
+        <div class="video-wrapper">
+          <!-- Cambia el src por tu vídeo real (YouTube, Vimeo o archivo) -->
+          <iframe 
+            src="" 
+            title="About the Rutana Team" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p class="video-card__desc" data-i18n="video.description1">
+          Meet the people behind Rutana and discover our passion for logistics.
+        </p>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-card">
+        <h3 class="video-card__title">About the Product</h3>
+        <div class="video-wrapper">
+          <iframe 
+            src="" 
+            title="Rutana Product Overview" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p class="video-card__desc" data-i18n="video.description2">
+          See how Rutana optimizes routes, tracks fleets and boosts your deliveries.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
     <!-- FINAL / ENGANCHE SECTION -->
 <section class="enganche">
   <div class="enganche-content">
@@ -377,7 +418,12 @@
           <span class="material-icons" title="Sacebook" data-i18n="enganche.contact.linkedin">facebook</span>
         </a>
       </div>
+      <button class="btn-startF" data-i18n="hero.btnStart"
+            onclick="window.open('https://rutana-app-frontend.web.app/management/routes/list', '_blank')">
+            Try Now
+          </button>
     </div>
+    
 
     <div class="enganche-image">
       <img src="assets/img/finalI.jpg" alt="Rutana fleet management illustration" />

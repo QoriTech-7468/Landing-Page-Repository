@@ -88,6 +88,30 @@
   filter: invert(29%) sepia(97%) saturate(1893%) hue-rotate(184deg) brightness(93%) contrast(91%);
 }
 
+.btn-startF {
+  background: white;
+  color: #043873;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  
+  display: block; /* Cambiado de inline-block a block */
+  
+  font-size: 1rem;
+}
+
+.btn-startF:hover {
+  box-shadow: 0 6px 16px rgba(255, 214, 10, 0.4);
+  background: #f8f9fa;
+  transform: translateY(-2px);
+  
+}
+
 .enganche-image {
   flex: 1;
   display: flex;
